@@ -38,7 +38,7 @@ pypip
 pip install pydotplus
 ```
 
-### install openocd
+## Install openocd
 Openocd is a on-chip debug tool. Follow those steps to install openocd: https://elinux.org/OpenOCD_Ubuntu_Package
 
 ##  Setup
