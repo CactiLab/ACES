@@ -142,7 +142,7 @@ python ~/Downloads/ACES-master/compiler/tools/build_tools/CubeMX2Makefile.py . ~
 
 #### Run Binaries in record mode and build final binaries
 
-Run openocd and connect to the board:
+Run openocd and connect to the board (STM32F469I_EVAL board):
 ```bash
 sudo openocd -f interface/stlink.cfg -f target/stm32f4x.cfg
 ```
