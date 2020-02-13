@@ -166,3 +166,58 @@ Run
 ```
 <REPO_ROOT>/compiler/tools/tcp_connect.py
 ```
+
+### Using gdb to debug
+Thanks to Naif S Almakhdhub, I got more information about this part.
+#### compile arm-none-eabi-gdb
+```
+$ mkdir gdb
+$ cd into gdb
+extract attachment
+$ mkdir build
+$ cd build
+$ ../gdb-7.11/configure --target=arm-none-eabi --prefix=${HOME}/arm/ --enable-interwork --enable-multilib --with-python
+$ make
+$ sudo make install
+```
+
+Then the gdb tool will then be in ~/arm/bin.
+
+### Run gdb tool to debug
+```
+<YOUR_GDB> <BINARY_FILE> -x support_scripts/gdb_helpers.py
+```
+For example:
+```
+~/arm/bin/arm-none-eabi-gdb FatFs-uSD--filename--mpu-8.elf -x ~/Downloads/ACES-master/compiler/tools/gdb_scripts/gdb_helpers.py
+(gdb) py cl()
+Reset_Handler () at startup_stm32f469xx.s:80
+80    startup_stm32f469xx.s: No such file or directory.
+Unable to match requested speed 2000 kHz, using 1800 kHz
+Unable to match requested speed 2000 kHz, using 1800 kHz
+target halted due to debug-request, current mode: Thread
+xPSR: 0x01000000 pc: 0x0801a890 msp: 0x20000ffc
+Loading section .isr_vector, size 0x1b8 lma 0x8000000
+Loading section .text, size 0x1a838 lma 0x80001b8
+Loading section .rodata, size 0x560 lma 0x801a9f0
+Loading section .ARM, size 0x8 lma 0x801af50
+Loading section .data, size 0xc8 lma 0x801af58
+Start address 0x801a890, load size 110624
+Transfer rate: 18 KB/sec, 9218 bytes/write.
+(gdb) py mpu()
+Reading 0
+    Region 0
+    Start: 0x0
+    End: 0x1
+    Size: 2, 0x2
+    Permissions 26:24: 0x0 ,(P-,U-)
+('\tExecute Never: ', 0)
+    SCB 18:16, 0x0:
+    TEX 21:19, 0x0:
+('\tEnabled :', 0)
+RBAR: 0x0
+RASR: 0x0
+----------------------------------------
+...
+```
+Run cl() first to connect to the board. There are other functions we can use in `gdb_helpers.py`.
