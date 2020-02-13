@@ -38,6 +38,9 @@ pypip
 pip install pydotplus
 ```
 
+### install openocd
+Openocd is a on-chip debug tool. Follow those steps to install openocd: https://elinux.org/OpenOCD_Ubuntu_Package
+
 ##  Setup
 To setup the project for the first time clone repo then run.
 
@@ -130,14 +133,29 @@ python {REPO_ROOT}/compiler/tools/built_tools/CubeMX2Makefile.py . <path to repo
 {REPO_ROOT}/compiler/tools/build_record.sh
 ```
 
+For example:
+```
+cd ~/Downloads/ACES-master/test_apps/STM32Cube_FW_F4_V1.14.0/Projects/STM32469I_EVAL/Applications/FatFs/FatFs_uSD/SW4STM32/STM32469I_EVAL
+python ~/Downloads/ACES-master/compiler/tools/build_tools/CubeMX2Makefile.py . ~/Downloads/ACES-master/ FatFs-uSD
+~/Downloads/ACES-master/compiler/tools/build_record.sh
+```
+
 #### Run Binaries in record mode and build final binaries
 
-This will run the record binaries on the board to generate the white-lists then build the final binaries with enforce mode enabled.  It requires that openocd be running and connected to the board.
+Run openocd and connect to the board:
+```bash
+sudo openocd -f interface/stlink.cfg -f target/stm32f4x.cfg
+```
+
+Then run the record binaries on the board to generate the white-lists then build the final binaries with enforce mode enabled.  It requires that openocd be running and connected to the board.
 ```
 cd test_apps/pinlock/Decode/SW4STM32/STM32F4-DISCO
 APP_NAME=<one of [FatFs-uSD, TCP-Echo, LCD-uSD, Animation]> {REPO_ROOT}/compiler/tools/build_final.sh record run
 ```
-
+For example:
+```
+ APP_NAME=FatFs-uSD ~/Downloads/ACES-master/compiler/tools/build_final.sh record run
+```
 
 For TCP Echo,
 
