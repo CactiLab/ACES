@@ -157,6 +157,10 @@ For example:
 ```
  APP_NAME=FatFs-uSD ~/Downloads/ACES-master/compiler/tools/build_final.sh record run
 ```
+If errors show: 
+`arm-none-eabi-gdb-py: command not found`
+you need to add newly installed gcc tool chain to the environment:
+`export PATH=$PATH:/homt/t/Download/ACES-master/gcc/bins/bin`
 
 For TCP Echo,
 
