@@ -1,12 +1,88 @@
 # ACES Code Analyzis
 
-> This is a document to analyze the ACES code or process.
+> This is a document to analyze the ACES code or process. With the help of setup steps from <https://github.com/CactiLab/ACES/blob/master/Readme.md>, combining with ACES paper to understand how it works.
 
-## Staring from the setups
+## Environment setups
 
-With the help of setup steps from <https://github.com/CactiLab/ACES/blob/master/Readme.md>, combining with ACES paper to understand how it works.
+Before run the test project, we need to initialize the environment, including the llvm, gcc tool chain.
 
-### Makefile for test_projects
+After installing the gcc tool chain, itself will download the newnest gcc too chain version, then we need to mv it to gcc/bins. According to the author's explaination, old version of gcc has problems when debug the ACES, so they download the new one.
+
+ACES adds new IR, passes, and backends to LLVM source code. After compiling and installing the LLVM, run the makefile in the hexbox-rt folder, it will use LLVM to generate the final tool ACES uses.
+
+Let's look into the hexbox-rt folder to check the code then back to see the newly add IR, or passes or bakends to the LLVM.
+
+### hexbox-rt folder
+
+In the `Makefile`, the target library it generates are syscalls, hexbox-enforce, and hexbox-record. v6 for cortex-m0, v7 for cortex-m3, v7e for cortex-m4. 
+
+- systemcalls: syscalls-v6-m.o, syscalls-v7-m.o, syscalls-v7e-m.o. (Source code: `syscalls.c`).
+- hexbox-enforce: enforce-hexbox-rt-v6-m.o, enforce-hexbox-rt-v7-m.o, enforce-hexbox-rt-v7e-m.o. (Source code: `emulator.c`, `profiler.c`, `hexbox-rt.c`).
+- hexbox-record: record-hexbox-rt-v6-m.o, record-hexbox-rt-v7-m.o, record-hexbox-rt-v7e-m.o. (Same source codes with hexbox-enforce).
+
+#### Makefile:
+
+- compile c code to bitcode
+
+```Makefile
+%-v6-m.bc: %.c
+ $(CLANG) $(OPT_LEVEL)  -c -target arm-none-eabi -mcpu=cortex-m0   \
+ $(CFLAGS) $< -o $@
+ ...
+```
+
+- compile bitcode to library
+
+```Makefile
+# ======================Hexbox Enforce Lib =====================================
+$(BUILD_DIR)/enforce-hexbox-rt-v6-m.o: enforce-hexbox-rt-v6-m.bc enforce-emulator-v6-m.bc enforce-profiler-v6-m.bc
+ $(LLVM_PATH)/llvm-link $^ -o $(@)
+ ...
+```
+
+- compile final object file
+
+```Makefile
+hexbox-enforce: $(BUILD_DIR) $(BUILD_DIR)/enforce-hexbox-rt-v6-m.o \
+ $(BUILD_DIR)/enforce-hexbox-rt-v7-m.o \
+ $(BUILD_DIR)/enforce-hexbox-rt-v7e-m.o
+@echo Done Building Hexbox-Enforce
+...
+```
+
+#### syscalls
+
+> System Workbench Minimal System calls file: \
+<https://sourceforge.net/p/cppcheck/discussion/general/thread/cd15ce3ec9/20fa/attachment/syscalls.c>: \
+The C runtime library include many functions, minimal system call is the redirection of the basic functions to the actual embedded platform. <https://github.com/JoeMerten/Stm32/blob/master/Lib/Stm/Stm32F2xx_StdPeriph_Lib_V1.1.0/Project/STM32F2xx_StdPeriph_Template/TrueSTUDIO/note.txt>
+
+`syscalls.c`` file is used to build the project, nothing special, not correspond any ACES new design. There is one example from this file:
+
+```c
+int __attribute__((weak)) _execve(char *name, char **argv, char **env)
+{
+  //errno = ENOMEM;
+  return -1;
+}
+```
+
+#### profile
+
+This file is to?
+
+#### emulator
+
+### New IRs
+
+- `SelectionDAGBuilder.cpp`: creates DAG, is used by analyzer.py to create 
+
+### New passes
+
+- ``
+
+### New backends
+
+## Makefile for test_projects
 
 According to <https://github.com/baoshi/CubeMX2Makefile>, the `CubeMX2Makefile.py` in `repo_root/compiler/tools` is trying to create the Makefile for the specific STM project automatically.
 
@@ -36,8 +112,15 @@ The generated Makefile includes (listed the important ones):
 
 The Makefile will build the project based on the optimization policy we set.
 
+- OBJECTS: `Makefile` calls `hexbox-rt-lib/syscalls-v7e-m.o` to build object files.
+- generate intermediate and record partitioned binary: use `record-hexbox-rt-v7e-m.o` with policy and final-policy
+- generate final partitioned binary use `enforce-hexbox-rt-v7e-m.o`
 
-### Build application 
+
+
+
+
+## Build application 
 
 > record data and code regions to generate the white-list
 
@@ -74,9 +157,15 @@ After this command, will generate:
 - `.build` folder: including some object files, region memory mapping file.
 - `.build/hexbox` folder: JSON files to describe the call graph, link scripts.
 - `bin` folder: each policy has its own origin, hexbox intermedia, record `.o, .bc, .elf` file
-- `.dot` files.
+- `.dot` files. (using analyzer.py and json files to generate) LLVM provides the command to generate dot files.
 
-### Run the application
+I want to check the the readable code after IR, so use `llvm-dis name.bc` to change `.bc` file to `.ll` file. Let's look at one of those bitcode files. It doesn't work.
+
+
+
+## Run the application
+
+Before run this command, we need to connect the board with openocd tool.
 
 ```bash
 APP_NAME=FatFs-uSD ~/Downloads/ACES-master/compiler/tools/build_final.sh record run
@@ -84,26 +173,18 @@ APP_NAME=FatFs-uSD ~/Downloads/ACES-master/compiler/tools/build_final.sh record 
 
 Load those `.elf` files generated by previoud steps to the board, using gdb and python script to connect the board. `gdb_record.py` corresponds with record option, `memory_reader.py` is used for different polices, `gdb_run.py` corresponds with run option.
 
-> Actually, those python scripts are used to show the information of each region.
+> Actually, those python scripts are used to connect the gdb tool, read the memory of the board, then show the information of each region.
 
-### Extension
+- recults.cvs: using collect_results.py and json files to generate
 
+---
 
+## Extension
 
-#### New IRs
+## Python tools with gdb
 
-- `SelectionDAGBuilder.cpp`:
+### gdb_record.py
 
-#### New passes
+### memory_reader.py
 
-- ``
-
-#### New backends
-
-### Python tools with gdb
-
-#### gdb_record.py
-
-#### memory_reader.py
-
-#### gdb_run.py
+### gdb_run.py
