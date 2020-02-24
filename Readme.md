@@ -94,14 +94,21 @@ make all
 4. Build final binaries
 
 Steps 2 - 4 vary based on the board and commands are given below.
+
+## Export gcc tool chain to the envornment
+
+```bash
+$ export PATH=$PATH:~/Download/ACES-master/gcc/bins/bin
+```
+
 ### Pinlock
 
 Set HEXBOX_ROOT in <REPO_ROOT>test_apps/pinlock/Decode/SW4STM32/STM32F4-DISCO/Makefile to REPO_ROOT
 #### Build record binaries
 
 ```
-cd test_apps/pinlock/Decode/SW4STM32/STM32F4-DISCO
-{REPO_ROOT}/compiler/tools/build_record.sh
+$ cd test_apps/pinlock/Decode/SW4STM32/STM32F4-DISCO
+$ {REPO_ROOT}/compiler/tools/build_record.sh
 ```
 
 #### Run Binaries in record mode and build final binaries.
@@ -112,13 +119,13 @@ Connect 3.3V Serial port to Discovery Board RX PA2, TX PA3.  Where TX and RX are
 
 Run Stimulus Script
 ```
-python <REPO_ROOT>/test_apps/pinlock/pyterm/pinlock_stimulus.py
+$ python <REPO_ROOT>/test_apps/pinlock/pyterm/pinlock_stimulus.py
 ```
 
 In separate terminal run record binary to get white-list, and build final binary
 ```
-cd test_apps/pinlock/Decode/SW4STM32/STM32F4-DISCO
-APPNAME=PinLock {REPO_ROOT}/compiler/tools/build_final.sh record run
+$ cd test_apps/pinlock/Decode/SW4STM32/STM32F4-DISCO
+$ APPNAME=PinLock {REPO_ROOT}/compiler/tools/build_final.sh record run
 ```
 
 ### STM32469I-Eval board applications
@@ -128,24 +135,24 @@ APPNAME=PinLock {REPO_ROOT}/compiler/tools/build_final.sh record run
 cd to appropriate SW4STM32 directory under STM32Cube_FW_F4_V1.14.0/Projects/STM32469I_EVAL/Applications
 
 ```
-cd STM32469I_EVAL
-python {REPO_ROOT}/compiler/tools/built_tools/CubeMX2Makefile.py . <path to repo root> <Name (one of [FatFs-uSD, TCP-Echo, LCD-uSD, Animation])>
-{REPO_ROOT}/compiler/tools/build_record.sh
+$ cd STM32469I_EVAL
+$ python {REPO_ROOT}/compiler/tools/built_tools/CubeMX2Makefile.py . <path to repo root> <Name (one of [FatFs-uSD, TCP-Echo, LCD-uSD, Animation])>
+$ {REPO_ROOT}/compiler/tools/build_record.sh
 ```
 
 For example:
 ```
-cd ~/Downloads/ACES-master/test_apps/STM32Cube_FW_F4_V1.14.0/Projects/STM32469I_EVAL/Applications/FatFs/FatFs_uSD/SW4STM32/STM32469I_EVAL
-python ~/Downloads/ACES-master/compiler/tools/build_tools/CubeMX2Makefile.py . ~/Downloads/ACES-master/ FatFs-uSD
-~/Downloads/ACES-master/compiler/tools/build_record.sh
+$ cd ~/Downloads/ACES-master/test_apps/STM32Cube_FW_F4_V1.14.0/Projects/STM32469I_EVAL/Applications/FatFs/FatFs_uSD/SW4STM32/STM32469I_EVAL
+$ python ~/Downloads/ACES-master/compiler/tools/build_tools/CubeMX2Makefile.py . ~/Downloads/ACES-master/ FatFs-uSD
+$ ~/Downloads/ACES-master/compiler/tools/build_record.sh
 ```
 
 #### Run Binaries in record mode and build final binaries
 
 Run openocd and connect to the board (STM32F469I_EVAL board):
 ```bash
-cd /usr/local/share/openocd/scripts
-sudo openocd -f interface/stlink.cfg -f target/stm32f4x.cfg
+$ cd /usr/local/share/openocd/scripts
+$ sudo openocd -f interface/stlink.cfg -f target/stm32f4x.cfg
 ```
 
 Then run the record binaries on the board to generate the white-lists then build the final binaries with enforce mode enabled.  It requires that openocd be running and connected to the board.
@@ -155,7 +162,7 @@ APP_NAME=<one of [FatFs-uSD, TCP-Echo, LCD-uSD, Animation]> {REPO_ROOT}/compiler
 ```
 For example:
 ```
- APP_NAME=FatFs-uSD ~/Downloads/ACES-master/compiler/tools/build_final.sh record run
+$ APP_NAME=FatFs-uSD ~/Downloads/ACES-master/compiler/tools/build_final.sh record run
 ```
 If errors show: 
 `arm-none-eabi-gdb-py: command not found`
@@ -193,7 +200,7 @@ Then the gdb tool will then be in ~/arm/bin.
 ```
 For example:
 ```
-~/arm/bin/arm-none-eabi-gdb FatFs-uSD--filename--mpu-8.elf -x ~/Downloads/ACES-master/compiler/tools/gdb_scripts/gdb_helpers.py
+$ ~/arm/bin/arm-none-eabi-gdb FatFs-uSD--filename--mpu-8.elf -x ~/Downloads/ACES-master/compiler/tools/gdb_scripts/gdb_helpers.py
 (gdb) py cl()
 Reset_Handler () at startup_stm32f469xx.s:80
 80    startup_stm32f469xx.s: No such file or directory.
