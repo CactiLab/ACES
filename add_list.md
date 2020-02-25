@@ -192,15 +192,17 @@ lib-Target-Arm-CMakeLists.txt
 ## New files
 
 ### JSON
-json-forwards.h
-InitializaPasses.h
-json.h
-jsoncpp.cpp
+- json-forwards.h
+- InitializaPasses.h
+- json.h
+
+
+- jsoncpp.cpp
 
 ### Hexbox
-lib/Transforms/Utils/HexboxApplication.cpp, 
-lib/Transforms/Utils/HexboxAnalysis.cpp, 
-lib/Transforms/Utils/ExperimentAnalysis.cpp
+- lib/Transforms/Utils/HexboxApplication.cpp, 
+- lib/Transforms/Utils/HexboxAnalysis.cpp, 
+- lib/Transforms/Utils/ExperimentAnalysis.cpp
 
 ### Backend
-MCExperimentPrinter.cpp
+- MCExperimentPrinter.cpp
