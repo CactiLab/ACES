@@ -2,16 +2,21 @@
 
 > This file is to show the additional code of ACES for LLVM
 
-## Head files
+## Modificated files
 
-- New folder created in `include/json`
+### Head files
+
+- include/llvm/InitializaPasses.h
+
 ```c
-json-forwards.h
-InitializaPasses.h
-json.h
+line 363:
+void initializeHexboxAnalysisPass(PassRegistry&);
+void initializeHexboxApplicationPass(PassRegistry&);
+void initializeExperimentAnalysisPass(PassRegistry&);
 ```
 
 - include/llvm/LinkAllPasses.h line 64:
+
 ```c
 (void) llvm::createHexboxAnalysisPass();
 (void) llvm::createHexboxApplicationPass();
@@ -19,87 +24,109 @@ json.h
 ```
 
 - include/llvm/Transforms/Instrumentation.h line 80:
+
 ```c
 FunctionPass * createHexboxAnalysisPass();
 ModulePass * createHexboxApplicationPass();
 FunctionPass * createExperimentAnalysisPass();
 ```
 
-- include/llvm/IR/Function.h line 137: 
+- include/llvm/IR/Function.h line 137:
+
 ```c
 void setIsHexboxEntry(bool V);
 bool getIsHexboxEntry();
 ```
 
-## Libraries
+### Libraries
 
 - lib/CodeGen
+
 ```c
-Same??
+Nothing changed
 ```
+
 - lib/IR line 281:
+
 ```c
 //isHexboxEntry = false;
 ```
+
 - lib/LTOCodeGnerator.cpp line146:
+
 ```c
 initializeHexboxAnalysisPass(R);
 initializeHexboxApplicationPass(R);
 initializeExperimentAnalysisPass(R);
 ```
-### Support
-new file to lib/Support/jsoncpp.cpp
--lib/Support/CMakeLists.txt line 131:
+
+#### Support
+
+- lib/Support/CMakeLists.txt line 131:
+
 ```c 
 jsoncpp.cpp
 ```
 
-### Transforms/Utils
-new file to 
-```
-lib/Transforms/Utils/HexboxApplication.cpp, lib/Transforms/Utils/HexboxAnalysis.cpp, lib/Transforms/Utils/ExperimentAnalysis.cpp
-```
+#### Transforms/Utils
 
-lib/Transform/Utils/CMakeLists.txt line 56:
+- **New** Passes
+
+  - lib/Transforms/Utils/HexboxApplication.cpp,
+  - lib/Transforms/Utils/HexboxAnalysis.cpp,
+  - lib/Transforms/Utils/ExperimentAnalysis.cpp
+
+
+- lib/Transform/Utils/CMakeLists.txt line 56:
+
 ```c
 HexboxAnalysis.cpp
 HexboxApplication.cpp
 ExperimentAnalysis.cpp
 ```
-lib/Transform/Utils/Utils.cpp line 44:
+
+- lib/Transform/Utils/Utils.cpp line 44:
+
 ```c
+
 initializeHexboxAnalysisPass(Registry);
 initializeHexboxApplicationPass(Registry);
 initializeExperimentAnalysisPass(Registry);
 ```
 
-### Transforms/IPO
-PassManagerBuilder.cpp line 868:
+#### Transforms/IPO
+
+- PassManagerBuilder.cpp line 868:
+
 ```c
 PM.add(createHexboxAnalysisPass());
 PM.add(createHexboxApplicationPass());
 PM.add(createExperimentAnalysisPass());
 ```
 
-### Analysis/
-CMakeLists.txt nothing
+#### Analysis/
 
-## Target/ARM/
-ARMInstrThumb.td 
+```c
+CMakeLists.txt nothing
+```
+
+### Target/ARM/
+
+- ARMInstrThumb.td
+
 ```c
 line 490
-def HEXBOX_tBL  : tPseudoInst<(outs), (ins pred:$p, thumb_bl_target:$func, 
-	   i32imm:$md), 12, IIC_Br,
-                [(ARMHexbox_Entry tglobaladdr:$func, tglobaladdr:$md)]>,
-           Requires<[IsThumb]>, Sched<[WriteBrL]> {
+def HEXBOX_tBL  : tPseudoInst<(outs), (ins pred:$p, thumb_bl_target:$func,
+    i32imm:$md), 12, IIC_Br,
+              [(ARMHexbox_Entry tglobaladdr:$func, tglobaladdr:$md)]>,
+          Requires<[IsThumb]>, Sched<[WriteBrL]> {
 }
- 
-line 535
-def HEXBOX_tBLXr : tPseudoInst<(outs), (ins pred:$p, GPR:$func, 
-	     i32imm:$md ),12, IIC_Br,
-          [(ARMHexbox_Entry GPR:$func, tglobaladdr:$md)]>,
-      Requires<[IsThumb]>,Sched<[WriteBrL]> { 
 
+line 535
+def HEXBOX_tBLXr : tPseudoInst<(outs), (ins pred:$p, GPR:$func,
+      i32imm:$md ),12, IIC_Br,
+        [(ARMHexbox_Entry GPR:$func, tglobaladdr:$md)]>,
+    Requires<[IsThumb]>,Sched<[WriteBrL]> {
 }
 
 line 841
@@ -115,7 +142,8 @@ bits<16> regs;
 let Inst{9}   = regs{14};
 ```
 
-ARMInstrInfo.td 
+- ARMInstrInfo.td
+
 ```c
 line 30:
 def SDT_ARMHexbox_Entry    : SDTypeProfile<0, -1, [SDTCisPtrTy<0>, SDTCisPtrTy<1>] >;
@@ -124,14 +152,14 @@ line 116:
 def ARMHexbox_Entry  : SDNode<"ARMISD::HEXBOX_Entry", SDT_ARMHexbox_Entry,
                               [SDNPHasChain, SDNPOptInGlue, SDNPOutGlue,
                                SDNPVariadic]>;
-
 ```
 
-ARMISelLowering.cpp
-```c 
-  case ARMISD::HEXBOX_Entry:  return "ARMISD::HEXBOX_Entry";
+- ARMISelLowering.cpp
 
-line 2049
+```c
+case ARMISD::HEXBOX_Entry:  return "ARMISD::HEXBOX_Entry";
+
+line 2049:
   GlobalValue *Call_Metadata = nullptr;
   if(CallOpc == ARMISD::CALL){
       if(CLI.CS){
@@ -149,13 +177,14 @@ line 2049
         }
       }
   }
-line 2057
+
+line 2057:
   //Added to test Getting Hexbox_Entry added
   if (Call_Metadata){
     Ops.push_back(DAG.getTargetGlobalAddress(Call_Metadata,dl,PtrVt));
      }
-line 2096
 
+line 2096:
   //CLI.CS->getInstruction()->dump();
 2070a2098
   //Chain.dump();
@@ -164,45 +193,67 @@ line 2096
 2698a2728
   assert(true && "ARMISD::CALL not evaluated to see if needs Hexbox");
 ```
-ARMISelLowering.h 
-54c54
+
+- ARMISelLowering.h
+
 ```c
 HEXBOX_Entry,  // Hexbox Compartment entry
 ```
 
-ARM.h 
+- ARM.h
+
 ```c
-```FunctionPass *createMCExperimentPrinterPass();
-```
-ARMTargetMachine.cpp 
-```c
-  //addPass(createMCExperimentPrinterPass());
-  //addPass(createMCExperimentPrinterPass());
-  //addPass(createMCExperimentPrinterPass());
-  addPass(createMCExperimentPrinterPass());
+FunctionPass *createMCExperimentPrinterPass();
 ```
 
-new file: **MCExperimentPrinter.cpp**
+- ARMTargetMachine.cpp
 
-lib-Target-Arm-CMakeLists.txt 
+```c
+//addPass(createMCExperimentPrinterPass());
+//addPass(createMCExperimentPrinterPass());
+//addPass(createMCExperimentPrinterPass());
+addPass(createMCExperimentPrinterPass());
+```
+
+- new file: **MCExperimentPrinter.cpp**
+
+- lib-Target-Arm-CMakeLists.txt
+
 ```c
   MCExperimentPrinter.cpp
 ```
 
-## New files
+## New created files
 
 ### JSON
+
+> Those files are used to analysis the ouput JSON files after analyzing. Coming from  <http://jsoncpp.sourceforge.net/>.
+
+`include/json/`
+
 - json-forwards.h
-- InitializaPasses.h
 - json.h
 
+`lib/Support/jsoncpp.cpp`
 
-- jsoncpp.cpp
+### **Hexbox**
 
-### Hexbox
-- lib/Transforms/Utils/HexboxApplication.cpp, 
-- lib/Transforms/Utils/HexboxAnalysis.cpp, 
-- lib/Transforms/Utils/ExperimentAnalysis.cpp
+> Those files are new passes, should be the most important part of ACES.
+
+`lib/Transforms/Utils/`
+
+- HexboxAnalysis.cpp
+  - input: 
+  - output: JSON files
+  - functions:
+    - AddFunctionTo JSON()
+- HexboxApplication.cpp,
+- ExperimentAnalysis.cpp
 
 ### Backend
+
+> This is for ARM backend
+
+`Target/ARM/`
+
 - MCExperimentPrinter.cpp
