@@ -262,13 +262,13 @@ addPass(createMCExperimentPrinterPass());
 `lib/Transforms/Utils/`
 
 - HexboxAnalysis.cpp
-  - input: 
-  - output: JSON files
+  - input: project files
+  - output: JSON files, data that can be used to create a HexBox policy
   - functions:
     - AddFunctionTo JSON()
 - HexboxApplication.cpp,
-  - input:
-  - output:
+  - input: JSON data after HexBox policy
+  - output: 
   - functions:
   
 - ExperimentAnalysis.cpp
@@ -283,3 +283,4 @@ addPass(createMCExperimentPrinterPass());
 `Target/ARM/`
 
 - MCExperimentPrinter.cpp
+  - Print out all messages of ACES

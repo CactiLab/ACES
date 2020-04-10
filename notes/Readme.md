@@ -112,9 +112,15 @@ This file is to?
 This part associate with the section `Micro-emulator for Stack Protection` of the paper. Because of the align size of MPU configuration, some small areas can not be set up precisely. So they use the emulator to record the stack access (white-list) of the compartments. 
 
 
-### 2.3. Python Extension
+## 3. Python Extension
 
-> Python tools with gdb
+### Python tools to do compartment generation
+
+#### graph_analysis folder
+
+### Python tools for running application
+
+> Python tools with gdb to connect the running application
 
 #### gdb_record.py
 
@@ -124,7 +130,7 @@ This part associate with the section `Micro-emulator for Stack Protection` of th
 
 #### gdb_helpers.py
 
-## 3. Makefile for test_projects
+## 4. Makefile for test_projects
 
 According to <https://github.com/baoshi/CubeMX2Makefile>, the `CubeMX2Makefile.py` in `repo_root/compiler/tools` is trying to create the Makefile for the specific STM project automatically.
 
@@ -158,7 +164,7 @@ The Makefile will build the project based on the optimization policy we set.
 - generate intermediate and record partitioned binary: use `record-hexbox-rt-v7e-m.o` with policy and final-policy
 - generate final partitioned binary use `enforce-hexbox-rt-v7e-m.o`
 
-## 4. Build application 
+## 5. Build application 
 
 > record data and code regions to generate the white-list
 
