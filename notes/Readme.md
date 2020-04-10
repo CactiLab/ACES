@@ -85,7 +85,7 @@ This part associate with the section `Micro-emulator for Stack Protection` of th
 ### 2.2. Files needed or added to LLVM
 
 #### 2.2.1 add_list: 
- > Another link: 
+ > Another link: https://github.com/CactiLab/ACES/blob/master/notes/add_list.md
 
 - Headers
 
