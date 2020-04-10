@@ -37,16 +37,35 @@ FunctionPass * createExperimentAnalysisPass();
 void setIsHexboxEntry(bool V);
 bool getIsHexboxEntry();
 ```
+- /include/llvm/IR/Instructions.h line 1529
+
+```c
+class CallInst : public Instruction,
+                 public OperandBundleUser<CallInst, User::op_iterator> {
+  friend class OperandBundleUser<CallInst, User::op_iterator>;
+
+  AttributeSet AttributeList; ///< parameter attributes for call
+  FunctionType *FTy;
+  GlobalValue * hexboxMetadata = nullptr;
+  ...
+  void setHexboxMetadata(GlobalValue * GV){
+      this->hexboxMetadata = GV;
+  }
+  GlobalValue * getHexboxMetadata() const{
+      return this->hexboxMetadata;
+  }
+  ...  
+```
 
 ### Libraries
 
-- lib/CodeGen
+- lib/CodeGen/SelectionDAG/SelectionDAGBuilder.cpp
 
 ```c
 Nothing changed
 ```
 
-- lib/IR line 281:
+- lib/IR/Function.cpp line 281:
 
 ```c
 //isHexboxEntry = false;
@@ -248,7 +267,14 @@ addPass(createMCExperimentPrinterPass());
   - functions:
     - AddFunctionTo JSON()
 - HexboxApplication.cpp,
+  - input:
+  - output:
+  - functions:
+  
 - ExperimentAnalysis.cpp
+  - input:
+  - output:
+  - functions:
 
 ### Backend
 
