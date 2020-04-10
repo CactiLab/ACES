@@ -4,7 +4,7 @@
 
 ## 1.Environment setups
 
-Before run the test project, we need to initialize the environment, including the llvm, gcc tool chain.
+Before running the test project, we need to initialize the environment, including the `llvm` and `gcc tool-chain`.
 
 ```shell
 cd compiler
@@ -12,15 +12,42 @@ ci_scripts/init_project.sh
 ci_scripts/ci-build.sh
 ```
 
-After installing the gcc tool chain, itself will download the newnest version of the gcc tool chain, then we need to mv it to gcc/bins. According to the author's explaination, old version of gcc has problems when debug the ACES, so they download the new one.
+After installing the `gcc tool-chain`, itself will download the newnest version of the gcc tool chain, then we need to mv it to gcc/bins. According to the author's explaination, old version of gcc has problems when debug the ACES, so they download the new one.
 
-ACES adds new `IR`, `passes`, and `backends` to the LLVM v4.0 source code. Creating python tools to help the `Program Dependece Graph (PDG)` static analysis. After compiling and installing the LLVM, run the makefile in the hexbox-rt folder, it will use LLVM to generate the final tools ACES uses.
+> ACES is implemented to perform four steps: 
+> - programanalysis, 
+> - compartment generation, 
+> - program instrumenta-tion, 
+> - and enforcement of protections at runtime.
+> 
+> Program analysis and program instrumentation are implemented as new `passes` in LLVM 4.0 and modifications to its `ARM backend`. Compartment generation is implemented in `Python` leveraging the NetworkX graph library. Runtime enforcement is provided in the form of a `C run-time library`.
 
-Let's look into the hexbox-rt folder to check the code then back to see the newly added `IR`, or `passes` or `bakends` to the LLVM.
+After compiling and installing the LLVM, running the `makefile` in the `hexbox-rt` folder to generate the final tools ACES uses. Those tools utilize python script in the `graph_analysis` folder to analysis the PDG of the Application, then with the help of llvm, to 
 
 ## 2. Source Code Analysis
 
-### 2.1. hexbox-rt folder
+### 2.1. Files needed or added to LLVM
+
+#### 2.1.1 add_list: 
+ > Another link: https://github.com/CactiLab/ACES/blob/master/notes/add_list.md
+
+- Headers
+
+- IRs
+  - `SelectionDAGBuilder.cpp`: creates DAG, it is used by analyzer.py to create 
+
+- New passes
+  - `HexboxAnalysis.cpp`
+  - `HexboxApplication.cpp`
+  - `ExperimentAnalysis.cpp`
+
+- New backends
+ - Modification of `ARMInstrThumb.td`, `ARMInstrInfo.td`, `ARMISelLowering.cpp`, and `ARMTargetMachine.cpp`
+
+- ...
+
+
+### 2.2. hexbox-rt folder
 
 In the `Makefile`, the target library it generates are `syscalls`, `hexbox-enforce`, and `hexbox-record`. V6 for cortex-m0, v7 for cortex-m3, v7e for cortex-m4. 
 
@@ -28,7 +55,9 @@ In the `Makefile`, the target library it generates are `syscalls`, `hexbox-enfor
 - hexbox-enforce: enforce-hexbox-rt-v6-m.o, enforce-hexbox-rt-v7-m.o, enforce-hexbox-rt-v7e-m.o. (Source code: `emulator.c`, `profiler.c`, `hexbox-rt.c`).
 - hexbox-record: record-hexbox-rt-v6-m.o, record-hexbox-rt-v7-m.o, record-hexbox-rt-v7e-m.o. (Same source codes with hexbox-enforce).
 
-#### 2.1.1. Makefile:
+Those files are used to make the run-time enhancement and build the white-list for sub-regions of MPU.
+
+#### 2.2.1. Makefile:
 
 - compile c code to bitcode
 
@@ -58,13 +87,13 @@ hexbox-enforce: $(BUILD_DIR) $(BUILD_DIR)/enforce-hexbox-rt-v6-m.o \
 ...
 ```
 
-#### 2.1.2. syscalls
+#### 2.2.2. syscalls
 
 > System Workbench Minimal System calls file: \
 <https://sourceforge.net/p/cppcheck/discussion/general/thread/cd15ce3ec9/20fa/attachment/syscalls.c>: \
 The C runtime library include many functions, minimal system call is the redirection of the basic functions to the actual embedded platform. <https://github.com/JoeMerten/Stm32/blob/master/Lib/Stm/Stm32F2xx_StdPeriph_Lib_V1.1.0/Project/STM32F2xx_StdPeriph_Template/TrueSTUDIO/note.txt>
 
-`syscalls.c`` file is used to build the project, nothing special, not correspond any ACES new design. There is one example from this file:
+`syscalls.c` file is used to build the project, nothing special, not correspond any ACES new design. There is one example from this file:
 
 ```c
 int __attribute__((weak)) _execve(char *name, char **argv, char **env)
@@ -74,33 +103,14 @@ int __attribute__((weak)) _execve(char *name, char **argv, char **env)
 }
 ```
 
-#### 2.1.3. profile
+#### 2.2.3. profile
 
 This file is to?
 
-#### 2.1.4. emulator
+#### 2.2.4. emulator
 
 This part associate with the section `Micro-emulator for Stack Protection` of the paper. Because of the align size of MPU configuration, some small areas can not be set up precisely. So they use the emulator to record the stack access (white-list) of the compartments. 
 
-### 2.2. Files needed or added to LLVM
-
-#### 2.2.1 add_list: 
- > Another link: https://github.com/CactiLab/ACES/blob/master/notes/add_list.md
-
-- Headers
-
-- IRs
-  - `SelectionDAGBuilder.cpp`: creates DAG, is used by analyzer.py to create 
-
-- New passes
-  - `HexboxAnalysis.cpp`
-  - `HexboxApplication.cpp`
-  - `ExperimentAnalysis.cpp`
-
-- New backends
- - Modification of `ARMInstrThumb.td`, `ARMInstrInfo.td`, `ARMISelLowering.cpp`, and `ARMTargetMachine.cpp`
-
-- ...
 
 ### 2.3. Python Extension
 
