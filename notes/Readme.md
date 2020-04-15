@@ -11,6 +11,12 @@ cd compiler
 ci_scripts/init_project.sh
 ci_scripts/ci-build.sh
 ```
+Because the target is ARM platform so we should cross-compile the clang/LLVM. It will need the tool `ninja`(<http://llvm.org/docs/HowToCrossCompileLLVM.html>): 
+
+```shell
+${SCRIPT_DIR}/cmake_config.sh ../llvm-release_40 ../bins
+ninja install
+```
 
 After installing the `gcc tool-chain`, itself will download the newnest version of the gcc tool chain, then we need to mv it to gcc/bins. According to the author's explaination, old version of gcc has problems when debug the ACES, so they download the new one.
 
