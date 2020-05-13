@@ -54,7 +54,12 @@
 #include <sys/times.h>
 
 /*
-"errno" is a specific global integer in the ANSI C standard (successive standards for the C programming language). 
+"errno" is a specific global integer in the ANSI C standard (successive standards for the C programming language). The runtime library asserts when an error occurs. Once asserted, errno's value persists until the application clears it.
+*/
+
+/*
+Newlib encloses errno and several related values into a structure of type struct _reent, and redefines the symbol errno as a macro that references a global _reent* pointer named __impure_ptr.
+Since ACES only uses syscall.c from Newlib, it comments all lines of errno.
 */
 
 /* Variables */
@@ -73,7 +78,15 @@ char **environ = __env;
 // Functions
 
 
+/*
+The implementation of fork() in uC/OS is probably a bad idea, because it raises task priority and synchronization issues that uC/OS already addresses quite well on its own. Then leaving this function unimplemented. 
+Same with 
+		_execve, _kill, _wait, and _getpid
+*/
 
+/*
+It seems only a few functions are implemented. All those functions are declared as __attribute__((weak)) because it is not sure if the application provides those functions. And this is the initialization of Newlib for ARM architecture.
+*/
 
 int __attribute__((weak,used)) _getpid(void)
 {
@@ -86,6 +99,9 @@ int __attribute__((weak,used)) _kill(int pid, int sig)
 	return -1;
 }
 
+/*
+Call the kill function?? but the kill in unimplemented??
+*/
 void __attribute__((weak,used)) _exit (int status)
 {
 	_kill(status, -1);
@@ -102,6 +118,10 @@ int __attribute__((weak)) _write(int file, char *ptr, int len)
 	return 0;
 }
 
+/*
+This function was called whenever malloc() runs out of heap and wants more. 
+Each time malloc() calls _sbrk the heap end grows by incr bytes.
+*/
 caddr_t __attribute__((weak)) _sbrk(int incr)
 {
 	/* This is very dangerous as heap can overflow into stack
