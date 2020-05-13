@@ -53,7 +53,9 @@
 #include <sys/time.h>
 #include <sys/times.h>
 
-
+/*
+"errno" is a specific global integer in the ANSI C standard (successive standards for the C programming language). 
+*/
 
 /* Variables */
 //#undef errno
