@@ -6,7 +6,7 @@
 
 ### Head files
 
-- include/llvm/InitializaPasses.h
+- include/llvm/InitializaPasses.h, initialization pass entry
 
 ```c
 line 363:
@@ -23,7 +23,7 @@ void initializeExperimentAnalysisPass(PassRegistry&);
 (void) llvm::createExperimentAnalysisPass();
 ```
 
-- include/llvm/Transforms/Instrumentation.h line 80:
+- include/llvm/Transforms/Instrumentation.h line 80: declaration
 
 ```c
 FunctionPass * createHexboxAnalysisPass();

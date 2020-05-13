@@ -1,3 +1,19 @@
+// This pass is registered with the pass manager and becomes a part of LLVM 
+// the passManager class takes a list of pass
+
+// 1. The pass is added in include/llvm/LinkAllPasses file: 
+//              (void) llvm::createHexboxAnalysisPass();
+// 2. Then add declaration to the include/llvm/Transforms/Instrumentation.h file:
+//              FunctionPass * createHexboxAnalysisPass();
+// 3. Add pass entry to the specific file lib/Transform/Utils/Utils.cpp
+//              initializeHexboxAnalysisPass(Registry);
+// 4. Add this initialization declaration to the include/llvm/InitializaPasses.h
+//              void initializeHexboxAnalysisPass(PassRegistry&);
+// 5. Add the name of this pass to the lib/Transform/Utils/CMakeLists.txt
+//              HexboxAnalysis.cpp
+
+
+
 //===- HexboxAnalysis.cpp -------------------------------------------------===//
 //
 //                     The LLVM Compiler Infrastructure
@@ -12,10 +28,13 @@
 //
 //===----------------------------------------------------------------------===//
 
+
+/* 6. Includings */
 #include "llvm/ADT/Statistic.h"
 #include "llvm/IR/Module.h"
 #include "llvm/IR/CallSite.h"
 #include "llvm/IR/Instructions.h"
+/* We are writing a pass, and this pass is operationg on functions (https://llvm.org/doxygen/classllvm_1_1Function.html) */
 #include "llvm/Pass.h"
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/Support/Debug.h"
@@ -23,15 +42,17 @@
 #include "llvm/ADT/SmallSet.h"
 #include "llvm/IR/Constants.h"
 #include "llvm/IR/DebugInfoMetadata.h"
-#include "json/json.h"  //From https://github.com/open-source-parsers/jsoncpp
+/* From https://github.com/open-source-parsers/jsoncpp */
+#include "json/json.h"  
 #include <fstream>
 
 
 #include "llvm/IR/InstIterator.h"
 
-
+/* 7. Use the llvm namespace to enable access to LLVM functions */
 using namespace llvm;
 
+/* 8. Define a DEBUG_TYPE macro, specifying the debugging name */
 #define DEBUG_TYPE "hexbox"
 
 STATISTIC(NumFunctions, "Num Functions");
@@ -40,18 +61,24 @@ static cl::opt<std::string> HexboxAnalysisResults("hexbox-analysis-results",
                                   cl::desc("JSON File to write analysis results to"),
                                   cl::init("-"),cl::value_desc("filename"));
 
+/* 9. Starts with an anonymous namespace */
 namespace {
 
+  /* 10. Creates the structure defining the pass, declares the pass */
+  /* This analysis pass works on a function level, running once for each function in the program. So it has inherited the FunctionPass function when declaring it. */
   struct HexboxAnalysis : public FunctionPass {
+    /* 11. Declares the pass identifier, which will be used by LLVM to identify the pass */
     static char ID;
+    /* 12. Modify the constructor of the pass to register */
     HexboxAnalysis() : FunctionPass(ID) {
         initializeHexboxAnalysisPass(*PassRegistry::getPassRegistry());
     }
-
+    
+    /* 13. Creates the necessary data structure to store the PDG. Declares a variable with json type: root node */
     Json::Value OutputJsonRoot;
 
     /******************************AddFunctionToJSON**************************
-    * Adds the function to the Root Json value, along with all callers and
+    * 14. Adds the function to the Root Json value, along with all callers and
     * callees.  Also initializes the Globals object under the function
     *
     *************************************************************************/
@@ -142,9 +169,9 @@ namespace {
             return true;
         }
         if (depth > 10){
-            // If we haven't found  a difference this deep just assume they are
-            // the same type. We need to overapproximate (i.e. say more things
-            // are equal than really are) so return true
+            /* If we haven't found  a difference this deep just assume they are
+            the same type. We need to overapproximate (i.e. say more things
+            are equal than really are) so return true. The depth is used when do optimization at next step*/
             return true;
         }
         if (PointerType *Pty1 = dyn_cast<PointerType>(T1) ){
@@ -539,7 +566,8 @@ namespace {
         return StringRef("HexboxAnalysis");
     }
 
-
+    /* 15. run function is important since this pass inherits FunctionPass and runs on a function,
+    a runOnFunction is defined to be run on a function */
     bool runOnFunction(Function & F) override {
 
 
@@ -556,7 +584,7 @@ namespace {
         return false;
     }
 
-
+    
     void addFunctionUses(GlobalVariable & GV, Value * V, Module & M){
          for (User * U : V->users()){
              Json::Value * Global;
@@ -598,8 +626,8 @@ namespace {
 
         return false;
     }
-
-
+   
+    /* Specify the getAnalysisUsage syntax: AU.addReauired<>, AU.addTransitive<>, AU.AddRequiredExtensionForVMULL... */
     // We don't modify the program, so we preserve all analyses.
     void getAnalysisUsage(AnalysisUsage &AU) const override {
 
@@ -612,11 +640,15 @@ namespace {
 
 
 unsigned HexboxAnalysis::dd_class_id =0;
+
+/* Initialized the pass ID */
 char HexboxAnalysis::ID = 0;
+
+/* Initialize the macro for initialization of the new pass */
 INITIALIZE_PASS_BEGIN(HexboxAnalysis, "HexboxAnaysis", "Performs HexBox LLVM Analysis",false, false)
 INITIALIZE_PASS_END(HexboxAnalysis, "HexboxAnaysis", "Performs HexBox LLVM Analysis",false, false)
-
 
 FunctionPass *llvm::createHexboxAnalysisPass(){
   return new HexboxAnalysis();
 }
+
