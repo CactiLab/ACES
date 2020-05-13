@@ -54,11 +54,11 @@ After compiling and installing the LLVM, running the `makefile` in the `hexbox-r
 
 ### 2.2. Pass analysis
 
-<https://github.com/CactiLab/ACES/blob/master/notes/Pass%20Analytics.md>
+<https://github.com/CactiLab/ACES/blob/master/notes/llvm-pass>
 
-### 2.2. hexbox-rt analysisi
+### 2.2. hexbox-rt analysis
 
-<https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt-analytics.md>
+<https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt>
 
 ## 3. Python Extension
 
