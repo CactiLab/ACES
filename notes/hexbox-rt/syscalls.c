@@ -85,7 +85,7 @@ Same with
 */
 
 /*
-It seems only a few functions are implemented. All those functions are declared as __attribute__((weak)) because it is not sure if the application provides those functions. And this is the initialization of Newlib for ARM architecture.
+It seems only a few functions are implemented. All those functions are declared as __attribute__((weak)) because it is not sure if the application provides those functions. And this is the initialization of Newlib for the ARM architecture.
 */
 
 int __attribute__((weak,used)) _getpid(void)

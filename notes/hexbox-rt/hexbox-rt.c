@@ -23,6 +23,7 @@
 
 
 #define MPU_CONFIG_REG     *((volatile uint32_t *) 0xE000ED94)
+/* 0xE000ED98, MPU region number register */
 #define MPU_REGION_NUM_REG *((volatile uint32_t *) 0xE000ED98)
 #define MPU_REGION_ADDR_REG *((volatile uint32_t *) 0xE000ED9C)
 #define MPU_REGION_ATTR_REG *((volatile uint32_t *) 0xE000EDA0)

@@ -1,12 +1,18 @@
+/*
+This file setup the interrupt status register, is called by mem_manage_handler.
+*/
+
+
 #include "emulator.h"
 #ifndef ENFORCE
 #include "profiler.h"
 #endif
 #include <stdio.h>
+
 //******************************STORE INSTRUCTIONS***************************/
                                     // 16   12   8    4    0   12    8    4    0
-                                  //|    |    |    |    |    |    |    |    |
-#define tSTMIA       0xC000       //|1100|0 Rn|reg list |
+                                    //|    |    |    |    |    |    |    |    |
+#define tSTMIA       0xC000         //|1100|0 Rn|reg list |
 #define tSTR_im2     0x9000         //|1001|0Rt | imm8    |
 #define tSTR_im1     0x6000         //|0110|0imm5 |Rn |Rt |
 #define tSTRB_im1    0x0000         //|0111|0imm5 |Rn |Rt |
@@ -38,9 +44,20 @@
 
 #define EMULATOR_FAULT while(1);
 
+/* Declare 17 registers: r0~r12, sp, lr, pc, psr. (see emulator.h struct reg_frame)
+And those registers will be placed in the RAM
+*/
 uint32_t AT_HEXBOX_DATA __hexbox_emulator_registers[17];
+/* Declare the stack placed in FLASH */
 uint32_t AT_HEXBOX_DATA __hexbox_emulator_stack[200];
 
+
+/* Two modes to protect the stack: 
+    record mode
+        call __profiler_record_emulator_compartment_access, collects all stacks accessed by the application when running, generating the __hexbox_acl_lut
+    enforce mode
+        we already has the lut. If check failed (this compartment is not in the lut, call EMULATOR_FAULT which is a while loop).
+*/
 
 /**
 void check_addr(uint32_t addr)
@@ -51,6 +68,37 @@ else
   Records the access and returns
 */
 #ifdef ENFORCE
+/* put this array in the flash. The global __hexbox_acl_lut stores the lookup table of the address in the stack that the application will access. For example: mem_access--filename--mpu-8.s 
+
+.global __hexbox_acl_lut
+.type  __hexbox_acl_lut, %object
+__hexbox_acl_lut:
+  .word __hexbox_comp0_acl
+  .word __hexbox_comp10_acl
+  .word __hexbox_comp11_acl
+  .word __hexbox_comp12_acl
+  .word 0
+  .word 0
+  .word 0
+  .word 0
+  .word 0
+  .word 0
+  .word __hexbox_comp19_acl
+  .word 0
+  .word 0
+  .word 0
+  .word __hexbox_comp2_acl
+  .word 0
+  .word 0
+  .word __hexbox_comp5_acl
+  .word 0
+  .word __hexbox_comp7_acl
+  .word 0
+  .word 0
+  .word 0
+  .size  __hexbox_acl_lut, .-__hexbox_acl_lut
+
+*/
 extern uint32_t* __hexbox_acl_lut[] AT_HEXBOX_CODE; //Needs to be in flash
 void AT_HEXBOX_CODE check_addr(uint32_t comp_id, uint32_t addr){
      // ACLS list is (uint32_t size)[emulator_acl_entry1,entry 2.]
@@ -82,11 +130,19 @@ void AT_HEXBOX_CODE check_addr(uint32_t comp_id, uint32_t addr){
 
 /**
 setup emulator
-
 mov r12, :lower16:funct1_A\n\t"
 "movt r12, :upper16:funct1_A\n\t"
+*/
 
+/* interrupt status register setup
+'naked' tells the compiler does not generate prologue and epilogue sequences for functions 
 
+ldr: loads a register with a value from a PC-relative memory address
+  ldr{type}{cond}Rt, label (PC-relative expression)
+stmia: store multiple registers, increment after, load value from register to address
+ldmia: load multiple registers, increment after, load value from address to register
+
+The size of this function is 0...I didn't find where this function is used.
 */
 void AT_HEXBOX_CODE __attribute__((naked))__hexbox_emulator_isr_setup(){
 
@@ -112,6 +168,13 @@ void AT_HEXBOX_CODE __attribute__((naked))__hexbox_emulator_isr_setup(){
   );
 }
 
+/* 
+Called by hexbox-rt hexbox_memmanage_handler: Regs->pc += emulate_store(instr,(uint32_t *)Regs, id);
+    Based on different store instructions to calculate the pc.
+
+It will use check_addr() function to determine whether this address is accessible or not. 
+
+*/
 uint8_t AT_HEXBOX_CODE emulate_store(uint32_t inst,uint32_t * Regs, uint32_t comp_id){
   uint16_t opcode;
   uint16_t thumb_inst;

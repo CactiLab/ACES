@@ -5,6 +5,30 @@
 
 #include <stdint.h>
 
+/* 
+'attribute' tells the compiler that the function is an embedded assembly function.
+'section' specifies that a variable must be placed in a particular section. 
+
+copy from FLASH to RAM
+.hexbox_rt_ram__vma_start = LOADADDR(.hexbox_rt_ram);
+.hexbox_rt_ram :
+{
+. = ALIGN(4);
+.hexbox_rt_ram__start = .;
+*(.hexbox_rt_ram);
+*(.hexbox_rt_ram*);
+. = ALIGN(4);
+.hexbox_rt_ram__end = .;
+} >RAM AT>FLASH
+
+.hexbox_rt_code :
+{
+    PROVIDE_HIDDEN(hexbox_rt_code__start = .);
+    *(.hexbox_rt_code)
+    *(.hexbox_rt_code*)
+    PROVIDE_HIDDEN(hexbox_rt_code__end = .);
+} >FLASH
+*/
 #define AT_HEXBOX_DATA __attribute__((section(".hexbox_rt_ram")))
 #define AT_HEXBOX_CODE __attribute__((section(".hexbox_rt_code")))
 
@@ -33,7 +57,14 @@ struct emulator_acl_entry{
   uint32_t end_addr;
 };
 
+/* 
+'naked' tells the compiler does not generate prologue and epilogue sequences for functions. No entry or exit.
+*/
 void AT_HEXBOX_CODE __attribute__((naked))__hexbox_emulator_isr() ;
+
+/*
+the value of emulate_store function places in flash 
+*/
 uint8_t AT_HEXBOX_CODE emulate_store(uint32_t inst,uint32_t * Regs, uint32_t comp_id) ;
 
 #endif

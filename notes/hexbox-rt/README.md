@@ -2,7 +2,7 @@
 
 In order to privide the runtime support for MPU context switch, stack protection, ACES developes the hexbox runtime libraries.
 
-# Makefile
+## Makefile
 
 `Makefile` generates the bitcode of the target libraries: `syscalls`, `hexbox-enforce`, and `hexbox-record`. `V6` for `cortex-m0`, `v7` for `cortex-m3`, `v7e` for `cortex-m4`. Those versions for cortex-m are defined in the `FLAG`. All those bitcode will be linked together after compiling the test applications to generate the final binary code.
 
@@ -18,7 +18,7 @@ In order to privide the runtime support for MPU context switch, stack protection
 
 Those files are used to handle MPU context switch, make the run-time enhancement, and build the white-list for sub-regions of MPU.
 
-## Source code analysis
+#### Source code analysis for Makefile
 
 - Pre-defines
 ```Makefile
@@ -86,7 +86,7 @@ syscalls: $(BUILD_DIR) $(BUILD_DIR)/syscalls-v6-m.o \
 
 All those libraries stored at llvm/hexbox-rt-lib/ directory
 
-# syscalls
+## Syscalls Source Code Analysis
 
 #### System Workbench Minimal System calls file
 For more information about which c-functions need which of these lowlevel functions please consult the Newlib libc-manual: <https://sourceware.org/newlib> 
@@ -100,12 +100,37 @@ One complete `syscall.c` example comparing with ACES: <https://sourceforge.net/p
 Porting and Using Newlib in Embedded Systems: <https://www.cs.ccu.edu.tw/~pahsiung/courses/esd/resources/newlib.pdf>
 
 #### syscall.c analysis
+
  <https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt/syscalls.c>
 
-# profile
+ In conclusion, the ACES uses syscall `_exit` to exit ??, `_sbrk` to malloc memory from heap, `_fini` will go into a while loop.
 
-This file is to?
+## Others
 
-# emulator
+Record mode will collect the stack address to generate suregions to protect (white-list). Running command should declare it is record mode or run mode. If it is record mode, hexbox-rt.c file will include the profiler to record stack information.
+
+```c
+If record mode: emulator + hexbox-rt + profiler. 
+Else enforce mode: emulator + hexbox-rt. 
+```
+
+
+### Emulator Source Code Analysis
 
 This part associate with the section `Micro-emulator for Stack Protection` of the paper. Because of the align size of MPU configuration, some small areas can not be set up precisely. So they use the emulator to record the stack access (white-list) of the compartments. 
+
+
+ <https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt/emulator.h>
+ <https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt/emulator.c>
+
+### Profiler Source Code Analysis
+
+Profiler runtime library provides the function to switch the compartments.
+
+<https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt/profiler.h>
+<https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt/profiler.c>
+
+### Hexbox-rt Source Code Analysis
+
+<https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt/hexbox-rt.h>
+<https://github.com/CactiLab/ACES/blob/master/notes/hexbox-rt/hexbox-rt.c>
