@@ -1,0 +1,1800 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-init.o)
+                              .build/startup_stm32f469xx.o (__libc_init_array)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o)
+                              bin/Animation--filename--mpu-8.elf.0.5.precodegen.bc (symbol from plugin) (malloc)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o) (_malloc_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o) (__malloc_lock)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sbrkr.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o) (_sbrk_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o)
+                              bin/Animation--filename--mpu-8.elf.0.5.precodegen.bc (symbol from plugin) (sprintf)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o) (_svfprintf_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o) (_dtoa_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-freer.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o) (_free_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-impure.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o) (_impure_ptr)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o) (_localeconv_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o) (__retarget_lock_acquire_recursive)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memchr.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o) (memchr)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memcpy.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o) (memcpy)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o) (_Balloc)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sbrkr.o) (errno)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strlen.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o) (strlen)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o) (__ssprint_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-callocr.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o) (_calloc_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o) (__global_locale)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mbtowc_r.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o) (__ascii_mbtowc)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memmove.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o) (memmove)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memset.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-callocr.o) (memset)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reallocr.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o) (_realloc_r)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strcmp.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o) (strcmp)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-wctomb_r.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o) (__ascii_wctomb)
+/home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-ctype_.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o) (_ctype_)
+/home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o) (__aeabi_dsub)
+/home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o) (__aeabi_dmul)
+/home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_cmpdf2.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o) (__aeabi_dcmpeq)
+/home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_unorddf2.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o) (__aeabi_dcmpun)
+/home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_fixdfsi.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o) (__aeabi_d2iz)
+/home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_aeabi_uldivmod.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o) (__aeabi_uldivmod)
+/home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_udivmoddi4.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
+/home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_dvmd_tls.o)
+                              /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+__lock___atexit_recursive_mutex
+                    0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+__lock___arc4random_mutex
+                    0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+errno               0x4               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+__lock___env_recursive_mutex
+                    0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+__lock___sinit_recursive_mutex
+                    0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+__lock___malloc_recursive_mutex
+                    0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+__lock___at_quick_exit_mutex
+                    0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+__lock___dd_hash_mutex
+                    0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+__lock___tz_mutex   0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+__lock___sfp_recursive_mutex
+                    0x1               /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+
+Discarded input sections
+
+ .text          0x0000000000000000       0x14 .build/startup_stm32f469xx.o
+ .text          0x0000000000000000        0x0 .build/hexbox/mem_accesses--filename--mpu-8.o
+ .text          0x0000000000000000        0x0 bin/Animation--filename--mpu-8.elf.0.5.precodegen.bc (symbol from plugin)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/llvm/hexbox-rt-lib/enforce-hexbox-rt-v7e-m.o (symbol from plugin)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sbrkr.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sbrkr.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sbrkr.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o)
+ .text._sprintf_r
+                0x0000000000000000       0x44 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-freer.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-freer.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-freer.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+ .text.__localeconv_l
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+ .text.localeconv
+                0x0000000000000000       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_init_recursive
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_close_recursive
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_acquire
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_try_acquire_recursive
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .text.__retarget_lock_release
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memchr.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memchr.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memcpy.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .text.__s2b    0x0000000000000000       0x9c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .text.__ulp    0x0000000000000000       0x44 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .text.__b2d    0x0000000000000000       0xd0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .text.__ratio  0x0000000000000000       0x58 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .text._mprec_log10
+                0x0000000000000000       0x38 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .text.__copybits
+                0x0000000000000000       0x48 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .text.__any_on
+                0x0000000000000000       0x5c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .rodata.__mprec_tinytens
+                0x0000000000000000       0x28 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x0000000000000000       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x0000000000000000       0x88 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .text._svfiprintf_r
+                0x0000000000000000      0xa54 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .rodata._svfiprintf_r.str1.4
+                0x0000000000000000       0x2f /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .rodata.blanks.7208
+                0x0000000000000000       0x10 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .rodata.zeroes.7209
+                0x0000000000000000       0x10 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-callocr.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-callocr.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-callocr.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .text._setlocale_r
+                0x0000000000000000       0x40 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .text.__locale_mb_cur_max
+                0x0000000000000000       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .text.__locale_ctype_ptr_l
+                0x0000000000000000        0x8 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .text.__locale_ctype_ptr
+                0x0000000000000000       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .text.setlocale
+                0x0000000000000000       0x10 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .bss._PathLocale
+                0x0000000000000000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mbtowc_r.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mbtowc_r.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mbtowc_r.o)
+ .text._mbtowc_r
+                0x0000000000000000       0x24 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mbtowc_r.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memmove.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memmove.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memmove.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reallocr.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reallocr.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reallocr.o)
+ .text          0x0000000000000000      0x2dc /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strcmp.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strcmp.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strcmp.o)
+ .debug_frame   0x0000000000000000       0x68 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x0000000000000000       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strcmp.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-wctomb_r.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-wctomb_r.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-wctomb_r.o)
+ .text._wctomb_r
+                0x0000000000000000       0x24 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-wctomb_r.o)
+ .text          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-ctype_.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-ctype_.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-ctype_.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_cmpdf2.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_cmpdf2.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_unorddf2.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_unorddf2.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_fixdfsi.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_fixdfsi.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000008000000 0x0000000000200000 xr
+RAM              0x0000000020000000 0x0000000000050000 xrw
+CCMRAM           0x0000000010000000 0x0000000000010000 rw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD .build/startup_stm32f469xx.o
+LOAD .build/hexbox/mem_accesses--filename--mpu-8.o
+LOAD bin/Animation--filename--mpu-8.elf.0.5.precodegen.bc
+LOAD bin/Animation--filename--mpu-8--hexbox--final.elf.o
+LOAD /home/t/Downloads/ACES-master/llvm/hexbox-rt-lib/enforce-hexbox-rt-v7e-m.o
+START GROUP
+LOAD /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a
+LOAD /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libm.a
+LOAD /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a
+END GROUP
+LOAD /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a
+LOAD /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libm.a
+                0x0000000000000200                _Min_Heap_Size = 0x200
+                0x0000000000001000                _Min_Stack_Size = 0x1000
+
+.isr_vector     0x0000000008000000      0x1b8
+                0x0000000008000000                . = ALIGN (0x8)
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x1b4 .build/startup_stm32f469xx.o
+                0x0000000008000000                g_pfnVectors
+                0x00000000080001b8                . = ALIGN (0x8)
+ *fill*         0x00000000080001b4        0x4 
+
+.text           0x00000000080001c0     0x51a8
+                0x00000000080001c0                . = ALIGN (0x8)
+ *(.text)
+ .text          0x00000000080001c0      0x958 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                0x00000000080001c0                _sbrk
+                0x0000000008000200                __hexbox_init_bss_section
+                0x0000000008000230                __hexbox_init_data_section
+                0x000000000800026e                __hexbox_set_init
+                0x000000000800035c                __hexbox_start
+                0x00000000080004a0                handle_svc
+                0x000000000800072c                MemManage_Handler
+                0x0000000008000a9e                main
+ *fill*         0x0000000008000b18        0x8 
+ .text          0x0000000008000b20       0xa0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memchr.o)
+                0x0000000008000b20                memchr
+ .text          0x0000000008000bc0      0x134 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memcpy.o)
+                0x0000000008000bc0                memcpy
+ *fill*         0x0000000008000cf4        0xc 
+ .text          0x0000000008000d00       0xdc /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strlen.o)
+                0x0000000008000d00                strlen
+ .text          0x0000000008000ddc      0x370 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+                0x0000000008000ddc                __aeabi_drsub
+                0x0000000008000de4                __aeabi_dsub
+                0x0000000008000de4                __subdf3
+                0x0000000008000de8                __adddf3
+                0x0000000008000de8                __aeabi_dadd
+                0x0000000008001060                __aeabi_ui2d
+                0x0000000008001060                __floatunsidf
+                0x0000000008001080                __floatsidf
+                0x0000000008001080                __aeabi_i2d
+                0x00000000080010a4                __extendsfdf2
+                0x00000000080010a4                __aeabi_f2d
+                0x00000000080010e0                __aeabi_ul2d
+                0x00000000080010e0                __floatundidf
+                0x00000000080010f0                __floatdidf
+                0x00000000080010f0                __aeabi_l2d
+ .text          0x000000000800114c      0x424 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+                0x000000000800114c                __aeabi_dmul
+                0x000000000800114c                __muldf3
+                0x00000000080013a0                __aeabi_ddiv
+                0x00000000080013a0                __divdf3
+ .text          0x0000000008001570      0x110 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_cmpdf2.o)
+                0x0000000008001570                __gtdf2
+                0x0000000008001570                __gedf2
+                0x0000000008001578                __ltdf2
+                0x0000000008001578                __ledf2
+                0x0000000008001580                __cmpdf2
+                0x0000000008001580                __eqdf2
+                0x0000000008001580                __nedf2
+                0x00000000080015fc                __aeabi_cdrcmple
+                0x000000000800160c                __aeabi_cdcmple
+                0x000000000800160c                __aeabi_cdcmpeq
+                0x000000000800161c                __aeabi_dcmpeq
+                0x0000000008001630                __aeabi_dcmplt
+                0x0000000008001644                __aeabi_dcmple
+                0x0000000008001658                __aeabi_dcmpge
+                0x000000000800166c                __aeabi_dcmpgt
+ .text          0x0000000008001680       0x2c /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_unorddf2.o)
+                0x0000000008001680                __aeabi_dcmpun
+                0x0000000008001680                __unorddf2
+ .text          0x00000000080016ac       0x50 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_fixdfsi.o)
+                0x00000000080016ac                __fixdfsi
+                0x00000000080016ac                __aeabi_d2iz
+ .text          0x00000000080016fc       0x30 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_aeabi_uldivmod.o)
+                0x00000000080016fc                __aeabi_uldivmod
+ .text          0x000000000800172c      0x2dc /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_udivmoddi4.o)
+                0x000000000800172c                __udivmoddi4
+ .text          0x0000000008001a08        0x4 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_dvmd_tls.o)
+                0x0000000008001a08                __aeabi_ldiv0
+                0x0000000008001a08                __aeabi_idiv0
+ *(.text*)
+ .text.Reset_Handler
+                0x0000000008001a0c       0x58 .build/startup_stm32f469xx.o
+                0x0000000008001a0c                Reset_Handler
+ .text.Default_Handler
+                0x0000000008001a64        0x2 .build/startup_stm32f469xx.o
+                0x0000000008001a64                RTC_Alarm_IRQHandler
+                0x0000000008001a64                HASH_RNG_IRQHandler
+                0x0000000008001a64                EXTI2_IRQHandler
+                0x0000000008001a64                TIM8_CC_IRQHandler
+                0x0000000008001a64                DebugMon_Handler
+                0x0000000008001a64                UART8_IRQHandler
+                0x0000000008001a64                SPI4_IRQHandler
+                0x0000000008001a64                TIM1_CC_IRQHandler
+                0x0000000008001a64                DMA2_Stream5_IRQHandler
+                0x0000000008001a64                DMA1_Stream5_IRQHandler
+                0x0000000008001a64                PVD_IRQHandler
+                0x0000000008001a64                TAMP_STAMP_IRQHandler
+                0x0000000008001a64                CAN2_RX1_IRQHandler
+                0x0000000008001a64                EXTI3_IRQHandler
+                0x0000000008001a64                TIM8_TRG_COM_TIM14_IRQHandler
+                0x0000000008001a64                TIM1_UP_TIM10_IRQHandler
+                0x0000000008001a64                TIM8_UP_TIM13_IRQHandler
+                0x0000000008001a64                I2C3_ER_IRQHandler
+                0x0000000008001a64                EXTI0_IRQHandler
+                0x0000000008001a64                I2C2_EV_IRQHandler
+                0x0000000008001a64                DMA1_Stream2_IRQHandler
+                0x0000000008001a64                CAN1_RX0_IRQHandler
+                0x0000000008001a64                FPU_IRQHandler
+                0x0000000008001a64                OTG_HS_WKUP_IRQHandler
+                0x0000000008001a64                LTDC_ER_IRQHandler
+                0x0000000008001a64                CAN2_SCE_IRQHandler
+                0x0000000008001a64                DMA2_Stream2_IRQHandler
+                0x0000000008001a64                SPI1_IRQHandler
+                0x0000000008001a64                TIM6_DAC_IRQHandler
+                0x0000000008001a64                TIM1_BRK_TIM9_IRQHandler
+                0x0000000008001a64                DCMI_IRQHandler
+                0x0000000008001a64                CAN2_RX0_IRQHandler
+                0x0000000008001a64                USART6_IRQHandler
+                0x0000000008001a64                USART3_IRQHandler
+                0x0000000008001a64                CAN1_RX1_IRQHandler
+                0x0000000008001a64                UART5_IRQHandler
+                0x0000000008001a64                DMA2_Stream0_IRQHandler
+                0x0000000008001a64                TIM4_IRQHandler
+                0x0000000008001a64                QUADSPI_IRQHandler
+                0x0000000008001a64                I2C1_EV_IRQHandler
+                0x0000000008001a64                DMA1_Stream6_IRQHandler
+                0x0000000008001a64                DMA1_Stream1_IRQHandler
+                0x0000000008001a64                UART4_IRQHandler
+                0x0000000008001a64                TIM3_IRQHandler
+                0x0000000008001a64                RCC_IRQHandler
+                0x0000000008001a64                TIM8_BRK_TIM12_IRQHandler
+                0x0000000008001a64                Default_Handler
+                0x0000000008001a64                EXTI15_10_IRQHandler
+                0x0000000008001a64                ADC_IRQHandler
+                0x0000000008001a64                DMA1_Stream7_IRQHandler
+                0x0000000008001a64                SPI5_IRQHandler
+                0x0000000008001a64                TIM7_IRQHandler
+                0x0000000008001a64                CAN2_TX_IRQHandler
+                0x0000000008001a64                TIM5_IRQHandler
+                0x0000000008001a64                DMA2_Stream7_IRQHandler
+                0x0000000008001a64                I2C3_EV_IRQHandler
+                0x0000000008001a64                EXTI9_5_IRQHandler
+                0x0000000008001a64                RTC_WKUP_IRQHandler
+                0x0000000008001a64                LTDC_IRQHandler
+                0x0000000008001a64                ETH_WKUP_IRQHandler
+                0x0000000008001a64                SPI2_IRQHandler
+                0x0000000008001a64                OTG_HS_EP1_IN_IRQHandler
+                0x0000000008001a64                DMA1_Stream0_IRQHandler
+                0x0000000008001a64                CAN1_TX_IRQHandler
+                0x0000000008001a64                EXTI4_IRQHandler
+                0x0000000008001a64                DSI_IRQHandler
+                0x0000000008001a64                ETH_IRQHandler
+                0x0000000008001a64                OTG_HS_EP1_OUT_IRQHandler
+                0x0000000008001a64                WWDG_IRQHandler
+                0x0000000008001a64                SPI6_IRQHandler
+                0x0000000008001a64                TIM2_IRQHandler
+                0x0000000008001a64                OTG_FS_WKUP_IRQHandler
+                0x0000000008001a64                TIM1_TRG_COM_TIM11_IRQHandler
+                0x0000000008001a64                OTG_HS_IRQHandler
+                0x0000000008001a64                DMA2D_IRQHandler
+                0x0000000008001a64                EXTI1_IRQHandler
+                0x0000000008001a64                UART7_IRQHandler
+                0x0000000008001a64                USART2_IRQHandler
+                0x0000000008001a64                I2C2_ER_IRQHandler
+                0x0000000008001a64                DMA2_Stream1_IRQHandler
+                0x0000000008001a64                CAN1_SCE_IRQHandler
+                0x0000000008001a64                FLASH_IRQHandler
+                0x0000000008001a64                DMA2_Stream4_IRQHandler
+                0x0000000008001a64                USART1_IRQHandler
+                0x0000000008001a64                OTG_FS_IRQHandler
+                0x0000000008001a64                SPI3_IRQHandler
+                0x0000000008001a64                DMA1_Stream4_IRQHandler
+                0x0000000008001a64                I2C1_ER_IRQHandler
+                0x0000000008001a64                FMC_IRQHandler
+                0x0000000008001a64                DMA2_Stream6_IRQHandler
+                0x0000000008001a64                SAI1_IRQHandler
+                0x0000000008001a64                DMA1_Stream3_IRQHandler
+ *fill*         0x0000000008001a66        0x2 
+ .text.__libc_init_array
+                0x0000000008001a68       0x50 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-init.o)
+                0x0000000008001a68                __libc_init_array
+ .text.malloc   0x0000000008001ab8       0x10 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o)
+                0x0000000008001ab8                malloc
+ .text.free     0x0000000008001ac8       0x10 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o)
+                0x0000000008001ac8                free
+ .text._malloc_r
+                0x0000000008001ad8      0x560 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                0x0000000008001ad8                _malloc_r
+ .text.__malloc_lock
+                0x0000000008002038        0xc /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o)
+                0x0000000008002038                __malloc_lock
+ .text.__malloc_unlock
+                0x0000000008002044        0xc /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o)
+                0x0000000008002044                __malloc_unlock
+ .text._sbrk_r  0x0000000008002050       0x24 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sbrkr.o)
+                0x0000000008002050                _sbrk_r
+ .text.sprintf  0x0000000008002074       0x4c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o)
+                0x0000000008002074                sprintf
+ .text._svfprintf_r
+                0x00000000080020c0     0x144c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+                0x00000000080020c0                _svfprintf_r
+ .text.quorem   0x000000000800350c      0x128 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+ *fill*         0x0000000008003634        0x4 
+ .text._dtoa_r  0x0000000008003638      0xe54 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+                0x0000000008003638                _dtoa_r
+ .text._malloc_trim_r
+                0x000000000800448c       0xa0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-freer.o)
+                0x000000000800448c                _malloc_trim_r
+ .text._free_r  0x000000000800452c      0x1cc /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-freer.o)
+                0x000000000800452c                _free_r
+ .text._localeconv_r
+                0x00000000080046f8       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+                0x00000000080046f8                _localeconv_r
+ .text.__retarget_lock_acquire_recursive
+                0x0000000008004714        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+                0x0000000008004714                __retarget_lock_acquire_recursive
+ .text.__retarget_lock_release_recursive
+                0x0000000008004718        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+                0x0000000008004718                __retarget_lock_release_recursive
+ .text._Balloc  0x000000000800471c       0x4c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x000000000800471c                _Balloc
+ .text._Bfree   0x0000000008004768       0x14 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x0000000008004768                _Bfree
+ .text.__multadd
+                0x000000000800477c       0x80 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x000000000800477c                __multadd
+ .text.__hi0bits
+                0x00000000080047fc       0x40 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x00000000080047fc                __hi0bits
+ .text.__lo0bits
+                0x000000000800483c       0x60 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x000000000800483c                __lo0bits
+ .text.__i2b    0x000000000800489c       0x14 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x000000000800489c                __i2b
+ .text.__multiply
+                0x00000000080048b0      0x124 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x00000000080048b0                __multiply
+ .text.__pow5mult
+                0x00000000080049d4       0xa0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x00000000080049d4                __pow5mult
+ .text.__lshift
+                0x0000000008004a74       0xa4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x0000000008004a74                __lshift
+ .text.__mcmp   0x0000000008004b18       0x38 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x0000000008004b18                __mcmp
+ .text.__mdiff  0x0000000008004b50      0x108 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x0000000008004b50                __mdiff
+ .text.__d2b    0x0000000008004c58       0xb8 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x0000000008004c58                __d2b
+ .text.__ssprint_r
+                0x0000000008004d10       0xfc /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+                0x0000000008004d10                __ssprint_r
+ .text._calloc_r
+                0x0000000008004e0c       0x60 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-callocr.o)
+                0x0000000008004e0c                _calloc_r
+ .text.__ascii_mbtowc
+                0x0000000008004e6c       0x2c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mbtowc_r.o)
+                0x0000000008004e6c                __ascii_mbtowc
+ .text.memmove  0x0000000008004e98       0xc8 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memmove.o)
+                0x0000000008004e98                memmove
+ .text.memset   0x0000000008004f60       0x9c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memset.o)
+                0x0000000008004f60                memset
+ .text._realloc_r
+                0x0000000008004ffc      0x34c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reallocr.o)
+                0x0000000008004ffc                _realloc_r
+ .text.__ascii_wctomb
+                0x0000000008005348       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-wctomb_r.o)
+                0x0000000008005348                __ascii_wctomb
+ *(.glue_7)
+ .glue_7        0x0000000008005364        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000008005364        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x0000000008005368                . = ALIGN (0x8)
+ *fill*         0x0000000008005364        0x4 
+                0x0000000008005368                _etext = .
+
+.vfp11_veneer   0x0000000008005368        0x0
+ .vfp11_veneer  0x0000000008005368        0x0 linker stubs
+
+.v4_bx          0x0000000008005368        0x0
+ .v4_bx         0x0000000008005368        0x0 linker stubs
+
+.iplt           0x0000000008005368        0x0
+ .iplt          0x0000000008005368        0x0 .build/startup_stm32f469xx.o
+
+.rodata         0x0000000008005370     0x2d98
+                0x0000000008005370                . = ALIGN (0x8)
+ *(.rodata)
+ .rodata        0x0000000008005370     0x25c8 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                0x0000000008005370                _hexbox_comp_.CODE_REGION_0_
+                0x00000000080053c0                _hexbox_comp_.CODE_REGION_10_
+                0x0000000008005410                _hexbox_comp_.CODE_REGION_11_
+                0x0000000008005460                _hexbox_comp_.CODE_REGION_12_
+                0x00000000080054b0                _hexbox_comp_.CODE_REGION_13_
+                0x0000000008005500                _hexbox_comp_.CODE_REGION_14_
+                0x0000000008005550                _hexbox_comp_.CODE_REGION_15_
+                0x00000000080055a0                _hexbox_comp_.CODE_REGION_16_
+                0x00000000080055f0                _hexbox_comp_.CODE_REGION_17_
+                0x0000000008005640                _hexbox_comp_.CODE_REGION_18_
+                0x0000000008005690                _hexbox_comp_.CODE_REGION_19_
+                0x00000000080056e0                _hexbox_comp_.CODE_REGION_1_
+                0x0000000008005730                _hexbox_comp_.CODE_REGION_20_
+                0x0000000008005780                _hexbox_comp_.CODE_REGION_21_
+                0x00000000080057d0                _hexbox_comp_.CODE_REGION_2_
+                0x0000000008005820                _hexbox_comp_.CODE_REGION_3_
+                0x0000000008005870                _hexbox_comp_.CODE_REGION_4_
+                0x00000000080058c0                _hexbox_comp_.CODE_REGION_5_
+                0x0000000008005910                _hexbox_comp_.CODE_REGION_6_
+                0x0000000008005960                _hexbox_comp_.CODE_REGION_7_
+                0x00000000080059b0                _hexbox_comp_.CODE_REGION_8_
+                0x0000000008005a00                _hexbox_comp_.CODE_REGION_9_
+                0x0000000008005a50                _hexbox_comp_.IRQ_CODE_REGION
+                0x0000000008005aa0                _hexbox_comp___hexbox_default
+                0x0000000008005ae4                __hexbox_md
+                0x0000000008005af4                __hexbox_md.2
+                0x0000000008005b04                __hexbox_md.3
+                0x0000000008005b14                __hexbox_md.4
+                0x0000000008005b24                __hexbox_md.5
+                0x0000000008005b34                __hexbox_md.6
+                0x0000000008005b44                __hexbox_md.7
+                0x0000000008005b54                __hexbox_md.8
+                0x0000000008005b64                __hexbox_md.9
+                0x0000000008005b74                __hexbox_md.10
+                0x0000000008005b84                __hexbox_md.11
+                0x0000000008005b94                __hexbox_md.12
+                0x0000000008005ba4                __hexbox_md.13
+                0x0000000008005bb4                __hexbox_md.14
+                0x0000000008005bc4                __hexbox_md.15
+                0x0000000008005bd4                __hexbox_md.16
+                0x0000000008005be4                __hexbox_md.17
+                0x0000000008005bf4                __hexbox_md.18
+                0x0000000008005c04                __hexbox_md.19
+                0x0000000008005c14                __hexbox_md.20
+                0x0000000008005c24                __hexbox_md.21
+                0x0000000008005c34                __hexbox_md.22
+                0x0000000008005c44                __hexbox_md.23
+                0x0000000008005c54                __hexbox_md.24
+                0x0000000008005c64                __hexbox_md.25
+                0x0000000008005c74                __hexbox_md.26
+                0x0000000008005c84                __hexbox_md.27
+                0x0000000008005c94                __hexbox_md.28
+                0x0000000008005ca4                __hexbox_md.29
+                0x0000000008005cb4                __hexbox_md.30
+                0x0000000008005cc4                __hexbox_md.31
+                0x0000000008005cd4                __hexbox_md.32
+                0x0000000008005ce4                __hexbox_md.33
+                0x0000000008005cf4                __hexbox_md.34
+                0x0000000008005d04                __hexbox_md.35
+                0x0000000008005d20                __hexbox_md.36
+                0x0000000008005d38                __hexbox_md.37
+                0x0000000008005d48                __hexbox_md.38
+                0x0000000008005d58                __hexbox_md.39
+                0x0000000008005d68                __hexbox_md.40
+                0x0000000008005d78                __hexbox_md.41
+                0x0000000008005d88                __hexbox_md.42
+                0x0000000008005d98                __hexbox_md.43
+                0x0000000008005da8                __hexbox_md.44
+                0x0000000008005db8                __hexbox_md.45
+                0x0000000008005dc8                __hexbox_md.46
+                0x0000000008005dd8                __hexbox_md.47
+                0x0000000008005de8                __hexbox_md.48
+                0x0000000008005df8                __hexbox_md.49
+                0x0000000008005e08                __hexbox_md.50
+                0x0000000008005e18                __hexbox_md.51
+                0x0000000008005e28                __hexbox_md.52
+                0x0000000008005e38                __hexbox_md.53
+                0x0000000008005e48                __hexbox_md.54
+                0x0000000008005e58                __hexbox_md.55
+                0x0000000008005e70                __hexbox_md.56
+                0x0000000008005e88                __hexbox_md.57
+                0x0000000008005e98                __hexbox_md.58
+                0x0000000008005ea8                __hexbox_md.59
+                0x0000000008005eb8                __hexbox_md.60
+                0x0000000008005ec8                __hexbox_md.61
+                0x0000000008005ed8                __hexbox_md.62
+                0x0000000008005ee8                __hexbox_md.63
+                0x0000000008005ef8                __hexbox_md.64
+                0x0000000008005f08                __hexbox_md.65
+                0x0000000008005f18                __hexbox_md.66
+                0x0000000008005f28                __hexbox_md.67
+                0x0000000008005f38                __hexbox_md.68
+                0x0000000008005f48                __hexbox_md.69
+                0x0000000008005f58                __hexbox_md.70
+                0x0000000008005f68                __hexbox_md.71
+                0x0000000008005f78                __hexbox_md.72
+                0x0000000008005f88                __hexbox_md.73
+                0x0000000008005f98                __hexbox_md.74
+                0x0000000008005fa8                __hexbox_md.75
+                0x0000000008005fb8                __hexbox_md.76
+                0x0000000008005fc8                __hexbox_md.77
+                0x0000000008005fd8                __hexbox_md.78
+                0x0000000008005fe8                __hexbox_md.79
+                0x0000000008005ff8                __hexbox_md.80
+                0x0000000008006008                __hexbox_md.81
+                0x0000000008006018                __hexbox_md.82
+                0x0000000008006028                __hexbox_md.83
+                0x0000000008006038                __hexbox_md.84
+                0x0000000008006048                __hexbox_md.85
+                0x0000000008006058                __hexbox_md.86
+                0x0000000008006068                __hexbox_md.87
+                0x0000000008006078                __hexbox_md.88
+                0x0000000008006088                __hexbox_md.89
+                0x0000000008006098                __hexbox_md.90
+                0x00000000080060a8                __hexbox_md.91
+                0x00000000080060b8                __hexbox_md.92
+                0x00000000080060c8                __hexbox_md.93
+                0x00000000080060d8                __hexbox_md.94
+                0x00000000080060e8                __hexbox_md.95
+                0x00000000080060f8                __hexbox_md.96
+                0x0000000008006110                __hexbox_md.97
+                0x0000000008006138                __hexbox_md.98
+                0x0000000008006148                __hexbox_md.99
+                0x0000000008006158                __hexbox_md.100
+                0x0000000008006168                __hexbox_md.101
+                0x0000000008006178                __hexbox_md.102
+                0x0000000008006188                __hexbox_md.103
+                0x0000000008006198                __hexbox_md.104
+                0x00000000080061a8                __hexbox_md.105
+                0x00000000080061b8                __hexbox_md.106
+                0x00000000080061c8                __hexbox_md.107
+                0x00000000080061d8                __hexbox_md.108
+                0x00000000080061e8                __hexbox_md.109
+                0x00000000080061f8                __hexbox_md.110
+                0x0000000008006208                __hexbox_md.111
+                0x0000000008006218                __hexbox_md.112
+                0x0000000008006228                __hexbox_md.113
+                0x0000000008006238                __hexbox_md.114
+                0x0000000008006248                __hexbox_md.115
+                0x0000000008006258                __hexbox_md.116
+                0x0000000008006268                __hexbox_md.117
+                0x0000000008006278                __hexbox_md.118
+                0x0000000008006288                __hexbox_md.119
+                0x0000000008006298                __hexbox_md.120
+                0x00000000080062a8                __hexbox_md.121
+                0x00000000080062b8                __hexbox_md.122
+                0x00000000080062c8                __hexbox_md.123
+                0x00000000080062d8                __hexbox_md.124
+                0x00000000080062e8                __hexbox_md.125
+                0x00000000080062f8                __hexbox_md.126
+                0x0000000008006308                __hexbox_md.127
+                0x0000000008006318                __hexbox_md.128
+                0x0000000008006328                __hexbox_md.129
+                0x0000000008006338                __hexbox_md.130
+                0x0000000008006348                __hexbox_md.131
+                0x0000000008006358                __hexbox_md.132
+                0x0000000008006368                __hexbox_md.133
+                0x0000000008006378                __hexbox_md.134
+                0x0000000008006388                __hexbox_md.135
+                0x0000000008006398                __hexbox_md.136
+                0x00000000080063a8                __hexbox_md.137
+                0x00000000080063b8                __hexbox_md.138
+                0x00000000080063c8                __hexbox_md.139
+                0x00000000080063d8                __hexbox_md.140
+                0x00000000080063e8                __hexbox_md.141
+                0x00000000080063f8                __hexbox_md.142
+                0x0000000008006408                __hexbox_md.143
+                0x0000000008006418                __hexbox_md.144
+                0x0000000008006428                __hexbox_md.145
+                0x0000000008006438                __hexbox_md.146
+                0x0000000008006448                __hexbox_md.147
+                0x0000000008006458                __hexbox_md.148
+                0x0000000008006468                __hexbox_md.149
+                0x0000000008006478                __hexbox_md.150
+                0x0000000008006488                __hexbox_md.151
+                0x0000000008006498                __hexbox_md.152
+                0x00000000080064a8                __hexbox_md.153
+                0x00000000080064b8                __hexbox_md.154
+                0x00000000080064c8                __hexbox_md.155
+                0x00000000080064d8                __hexbox_md.156
+                0x00000000080064e8                __hexbox_md.157
+                0x00000000080064f8                __hexbox_md.158
+                0x0000000008006508                __hexbox_md.159
+                0x0000000008006518                __hexbox_md.160
+                0x0000000008006528                __hexbox_md.161
+                0x0000000008006538                __hexbox_md.162
+                0x0000000008006548                __hexbox_md.163
+                0x0000000008006558                __hexbox_md.164
+                0x0000000008006568                __hexbox_md.165
+                0x0000000008006578                __hexbox_md.166
+                0x0000000008006588                __hexbox_md.167
+                0x0000000008006598                __hexbox_md.168
+                0x00000000080065a8                __hexbox_md.169
+                0x00000000080065b8                __hexbox_md.170
+                0x00000000080065c8                __hexbox_md.171
+                0x00000000080065d8                __hexbox_md.172
+                0x00000000080065e8                __hexbox_md.173
+                0x00000000080065f8                __hexbox_md.174
+                0x0000000008006608                __hexbox_md.175
+                0x0000000008006618                __hexbox_md.176
+                0x0000000008006628                __hexbox_md.177
+                0x0000000008006638                __hexbox_md.178
+                0x0000000008006648                __hexbox_md.179
+                0x0000000008006658                __hexbox_md.180
+                0x0000000008006668                __hexbox_md.181
+                0x0000000008006678                __hexbox_md.182
+                0x0000000008006688                __hexbox_md.183
+                0x0000000008006698                __hexbox_md.184
+                0x00000000080066a8                __hexbox_md.185
+                0x00000000080066b8                __hexbox_md.186
+                0x00000000080066c8                __hexbox_md.187
+                0x00000000080066d8                __hexbox_md.188
+                0x00000000080066e8                __hexbox_md.189
+                0x00000000080066f8                __hexbox_md.190
+                0x0000000008006708                __hexbox_md.191
+                0x0000000008006718                __hexbox_md.192
+                0x0000000008006728                __hexbox_md.193
+                0x0000000008006738                __hexbox_md.194
+                0x0000000008006748                __hexbox_md.195
+                0x0000000008006758                __hexbox_md.196
+                0x0000000008006768                __hexbox_md.197
+                0x0000000008006778                __hexbox_md.198
+                0x0000000008006788                __hexbox_md.199
+                0x0000000008006798                __hexbox_md.200
+                0x00000000080067a8                __hexbox_md.201
+                0x00000000080067b8                __hexbox_md.202
+                0x00000000080067c8                __hexbox_md.203
+                0x00000000080067d8                __hexbox_md.204
+                0x00000000080067e8                __hexbox_md.205
+                0x00000000080067f8                __hexbox_md.206
+                0x0000000008006808                __hexbox_md.207
+                0x0000000008006818                __hexbox_md.208
+                0x0000000008006828                __hexbox_md.209
+                0x0000000008006838                __hexbox_md.210
+                0x0000000008006848                __hexbox_md.211
+                0x0000000008006858                __hexbox_md.212
+                0x0000000008006868                __hexbox_md.213
+                0x0000000008006878                __hexbox_md.214
+                0x0000000008006888                __hexbox_md.215
+                0x0000000008006898                __hexbox_md.216
+                0x00000000080068a8                __hexbox_md.217
+                0x00000000080068b8                __hexbox_md.218
+                0x00000000080068c8                __hexbox_md.219
+                0x00000000080068d8                __hexbox_md.220
+                0x00000000080068e8                __hexbox_md.221
+                0x00000000080068f8                __hexbox_md.222
+                0x0000000008006908                __hexbox_md.223
+                0x0000000008006918                __hexbox_md.224
+                0x0000000008006928                __hexbox_md.225
+                0x0000000008006938                __hexbox_md.226
+                0x0000000008006948                __hexbox_md.227
+                0x0000000008006958                __hexbox_md.228
+                0x0000000008006968                __hexbox_md.229
+                0x0000000008006978                __hexbox_md.230
+                0x0000000008006988                __hexbox_md.231
+                0x0000000008006998                __hexbox_md.232
+                0x00000000080069a8                __hexbox_md.233
+                0x00000000080069b8                __hexbox_md.234
+                0x00000000080069c8                __hexbox_md.235
+                0x00000000080069d8                __hexbox_md.236
+                0x00000000080069e8                __hexbox_md.237
+                0x00000000080069f8                __hexbox_md.238
+                0x0000000008006a08                __hexbox_md.239
+                0x0000000008006a18                __hexbox_md.240
+                0x0000000008006a28                __hexbox_md.241
+                0x0000000008006a38                __hexbox_md.242
+                0x0000000008006a48                __hexbox_md.243
+                0x0000000008006a58                __hexbox_md.244
+                0x0000000008006a68                __hexbox_md.245
+                0x0000000008006a78                __hexbox_md.246
+                0x0000000008006a88                __hexbox_md.247
+                0x0000000008006a98                __hexbox_md.248
+                0x0000000008006aa8                __hexbox_md.249
+                0x0000000008006ab8                __hexbox_md.250
+                0x0000000008006ac8                __hexbox_md.251
+                0x0000000008006ad8                __hexbox_md.252
+                0x0000000008006ae8                __hexbox_md.253
+                0x0000000008006af8                __hexbox_md.254
+                0x0000000008006b08                __hexbox_md.255
+                0x0000000008006b18                __hexbox_md.256
+                0x0000000008006b28                __hexbox_md.257
+                0x0000000008006b38                __hexbox_md.258
+                0x0000000008006b48                __hexbox_md.259
+                0x0000000008006b58                __hexbox_md.260
+                0x0000000008006b68                __hexbox_md.261
+                0x0000000008006b78                __hexbox_md.262
+                0x0000000008006b88                __hexbox_md.263
+                0x0000000008006b98                __hexbox_md.264
+                0x0000000008006ba8                __hexbox_md.265
+                0x0000000008006bb8                __hexbox_md.266
+                0x0000000008006bc8                __hexbox_md.267
+                0x0000000008006bd8                __hexbox_md.268
+                0x0000000008006be8                __hexbox_md.269
+                0x0000000008006bf8                __hexbox_md.270
+                0x0000000008006c08                __hexbox_md.271
+                0x0000000008006c18                __hexbox_md.272
+                0x0000000008006c28                __hexbox_md.273
+                0x0000000008006c38                __hexbox_md.274
+                0x0000000008006c48                __hexbox_md.275
+                0x0000000008006c58                __hexbox_md.276
+                0x0000000008006c68                __hexbox_md.277
+                0x0000000008006c78                __hexbox_md.278
+                0x0000000008006c88                __hexbox_md.279
+                0x0000000008006c98                __hexbox_md.280
+                0x0000000008006ca8                __hexbox_md.281
+                0x0000000008006cb8                __hexbox_md.282
+                0x0000000008006cc8                __hexbox_md.283
+                0x0000000008006cd8                __hexbox_md.284
+                0x0000000008006ce8                __hexbox_md.285
+                0x0000000008006cf8                __hexbox_md.286
+                0x0000000008006d08                __hexbox_md.287
+                0x0000000008006d18                __hexbox_md.288
+                0x0000000008006d28                __hexbox_md.289
+                0x0000000008006d38                __hexbox_md.290
+                0x0000000008006d48                __hexbox_md.291
+                0x0000000008006d58                __hexbox_md.292
+                0x0000000008006d68                __hexbox_md.293
+                0x0000000008006d78                __hexbox_md.294
+                0x0000000008006d88                __hexbox_md.295
+                0x0000000008006d98                __hexbox_md.296
+                0x0000000008006da8                __hexbox_md.297
+                0x0000000008006db8                __hexbox_md.298
+                0x0000000008006dc8                __hexbox_md.299
+                0x0000000008006dd8                __hexbox_md.300
+                0x0000000008006de8                __hexbox_md.301
+                0x0000000008006df8                __hexbox_md.302
+                0x0000000008006e08                __hexbox_md.303
+                0x0000000008006e18                __hexbox_md.304
+                0x0000000008006e28                __hexbox_md.305
+                0x0000000008006e38                __hexbox_md.306
+                0x0000000008006e48                __hexbox_md.307
+                0x0000000008006e58                __hexbox_md.308
+                0x0000000008006e68                __hexbox_md.309
+                0x0000000008006e78                __hexbox_md.310
+                0x0000000008006e88                __hexbox_md.311
+                0x0000000008006e98                __hexbox_md.312
+                0x0000000008006ea8                __hexbox_md.313
+                0x0000000008006eb8                __hexbox_md.314
+                0x0000000008006ec8                __hexbox_md.315
+                0x0000000008006ed8                __hexbox_md.316
+                0x0000000008006ee8                __hexbox_md.317
+                0x0000000008006ef8                __hexbox_md.318
+                0x0000000008006f08                __hexbox_md.319
+                0x0000000008006f18                __hexbox_md.320
+                0x0000000008006f28                __hexbox_md.321
+                0x0000000008006f38                __hexbox_md.322
+                0x0000000008006f48                __hexbox_md.323
+                0x0000000008006f58                __hexbox_md.324
+                0x0000000008006f68                __hexbox_md.325
+                0x0000000008006f78                __hexbox_md.326
+                0x0000000008006f88                __hexbox_md.327
+                0x0000000008006f98                __hexbox_md.328
+                0x0000000008006fa8                __hexbox_md.329
+                0x0000000008006fb8                __hexbox_md.330
+                0x0000000008006fc8                __hexbox_md.331
+                0x0000000008006fd8                __hexbox_md.332
+                0x0000000008006fe8                __hexbox_md.333
+                0x0000000008006ff8                __hexbox_md.334
+                0x0000000008007008                __hexbox_md.335
+                0x0000000008007018                __hexbox_md.336
+                0x0000000008007028                __hexbox_md.337
+                0x0000000008007038                __hexbox_md.338
+                0x0000000008007048                __hexbox_md.339
+                0x0000000008007058                __hexbox_md.340
+                0x0000000008007068                __hexbox_md.341
+                0x0000000008007078                __hexbox_md.342
+                0x0000000008007088                __hexbox_md.343
+                0x0000000008007098                __hexbox_md.344
+                0x00000000080070a8                __hexbox_md.345
+                0x00000000080070b8                __hexbox_md.346
+                0x00000000080070c8                __hexbox_md.347
+                0x00000000080070d8                __hexbox_md.348
+                0x00000000080070e8                __hexbox_md.349
+                0x00000000080070f8                __hexbox_md.350
+                0x0000000008007108                __hexbox_md.351
+                0x0000000008007118                __hexbox_md.352
+                0x0000000008007128                __hexbox_md.353
+                0x0000000008007138                __hexbox_md.354
+                0x0000000008007148                __hexbox_md.355
+                0x0000000008007158                __hexbox_md.356
+                0x0000000008007168                __hexbox_md.357
+                0x0000000008007178                __hexbox_md.358
+                0x0000000008007188                __hexbox_md.359
+                0x0000000008007198                __hexbox_md.360
+                0x00000000080071a8                __hexbox_md.361
+                0x00000000080071b8                __hexbox_md.362
+                0x00000000080071c8                __hexbox_md.363
+                0x00000000080071d8                __hexbox_md.364
+                0x00000000080071e8                __hexbox_md.365
+                0x00000000080071f8                __hexbox_md.366
+                0x0000000008007208                __hexbox_md.367
+                0x0000000008007218                __hexbox_md.368
+                0x0000000008007228                __hexbox_md.369
+                0x0000000008007238                __hexbox_md.370
+                0x0000000008007248                __hexbox_md.371
+                0x0000000008007258                __hexbox_md.372
+                0x0000000008007268                __hexbox_md.373
+                0x0000000008007278                __hexbox_md.374
+                0x0000000008007288                __hexbox_md.375
+                0x0000000008007298                __hexbox_md.376
+                0x00000000080072a8                __hexbox_md.377
+                0x00000000080072b8                __hexbox_md.378
+                0x00000000080072c8                __hexbox_md.379
+                0x00000000080072d8                __hexbox_md.380
+                0x00000000080072e8                __hexbox_md.381
+                0x00000000080072f8                __hexbox_md.382
+                0x0000000008007308                __hexbox_md.383
+                0x0000000008007318                __hexbox_md.384
+                0x0000000008007328                __hexbox_md.385
+                0x0000000008007338                __hexbox_md.386
+                0x0000000008007348                __hexbox_md.387
+                0x0000000008007358                __hexbox_md.388
+                0x0000000008007368                __hexbox_md.389
+                0x0000000008007378                __hexbox_md.390
+                0x0000000008007388                __hexbox_md.391
+                0x0000000008007398                __hexbox_md.392
+                0x00000000080073a8                __hexbox_md.393
+                0x00000000080073b8                __hexbox_md.394
+                0x00000000080073c8                __hexbox_md.395
+                0x00000000080073d8                __hexbox_md.396
+                0x00000000080073e8                __hexbox_md.397
+                0x00000000080073f8                __hexbox_md.398
+                0x0000000008007408                __hexbox_md.399
+                0x0000000008007418                __hexbox_md.400
+                0x0000000008007428                __hexbox_md.401
+                0x0000000008007438                __hexbox_md.402
+                0x0000000008007448                __hexbox_md.403
+                0x0000000008007458                __hexbox_md.404
+                0x0000000008007468                __hexbox_md.405
+                0x0000000008007478                __hexbox_md.406
+                0x0000000008007488                __hexbox_md.407
+                0x0000000008007498                __hexbox_md.408
+                0x00000000080074a8                __hexbox_md.409
+                0x00000000080074b8                __hexbox_md.410
+                0x00000000080074c8                __hexbox_md.411
+                0x00000000080074d8                __hexbox_md.412
+                0x00000000080074e8                __hexbox_md.413
+                0x00000000080074f8                __hexbox_md.414
+                0x0000000008007508                __hexbox_md.415
+                0x0000000008007518                __hexbox_md.416
+                0x0000000008007528                __hexbox_md.417
+                0x0000000008007538                __hexbox_md.418
+                0x0000000008007548                __hexbox_md.419
+                0x0000000008007558                __hexbox_md.420
+                0x0000000008007568                __hexbox_md.421
+                0x0000000008007578                __hexbox_md.422
+                0x0000000008007588                __hexbox_md.423
+                0x0000000008007598                __hexbox_md.424
+                0x00000000080075a8                __hexbox_md.425
+                0x00000000080075b8                __hexbox_md.426
+                0x00000000080075c8                __hexbox_md.427
+                0x00000000080075d8                __hexbox_md.428
+                0x00000000080075e8                __hexbox_md.429
+                0x00000000080075f8                __hexbox_md.430
+                0x0000000008007608                __hexbox_md.431
+                0x0000000008007618                __hexbox_md.432
+                0x0000000008007628                __hexbox_md.433
+                0x0000000008007638                __hexbox_md.434
+                0x0000000008007648                __hexbox_md.435
+                0x0000000008007658                __hexbox_md.436
+                0x0000000008007668                __hexbox_md.437
+                0x0000000008007678                __hexbox_md.438
+                0x0000000008007688                __hexbox_md.439
+                0x0000000008007698                __hexbox_md.440
+                0x00000000080076a8                __hexbox_md.441
+                0x00000000080076b8                __hexbox_md.442
+                0x00000000080076c8                __hexbox_md.443
+                0x00000000080076d8                __hexbox_md.444
+                0x00000000080076e8                __hexbox_md.445
+                0x00000000080076f8                __hexbox_md.446
+                0x0000000008007708                __hexbox_md.447
+                0x0000000008007718                __hexbox_md.448
+                0x0000000008007728                __hexbox_md.449
+                0x0000000008007738                __hexbox_md.450
+                0x0000000008007748                __hexbox_md.451
+                0x0000000008007758                __hexbox_md.452
+                0x0000000008007768                __hexbox_md.453
+                0x0000000008007778                __hexbox_md.454
+                0x0000000008007788                __hexbox_md.455
+                0x0000000008007798                __hexbox_md.456
+                0x00000000080077a8                __hexbox_md.457
+                0x00000000080077b8                __hexbox_md.458
+                0x00000000080077c8                __hexbox_md.459
+                0x00000000080077d8                __hexbox_md.460
+                0x00000000080077e8                __hexbox_md.461
+                0x00000000080077f8                __hexbox_md.462
+                0x0000000008007808                __hexbox_md.463
+                0x0000000008007818                __hexbox_md.464
+                0x0000000008007828                __hexbox_md.465
+                0x0000000008007838                __hexbox_md.466
+                0x0000000008007848                __hexbox_md.467
+                0x0000000008007858                __hexbox_md.468
+                0x0000000008007868                __hexbox_md.469
+                0x0000000008007878                __hexbox_md.470
+                0x0000000008007888                __hexbox_md.471
+                0x0000000008007898                __hexbox_md.472
+                0x00000000080078a8                __hexbox_md.473
+                0x00000000080078b8                __hexbox_md.474
+                0x00000000080078c8                __hexbox_md.475
+                0x00000000080078d8                __hexbox_md.476
+                0x00000000080078e8                __hexbox_md.477
+                0x00000000080078f8                __hexbox_md.478
+                0x0000000008007908                __hexbox_md.479
+                0x0000000008007918                __hexbox_md.480
+                0x0000000008007928                __hexbox_md.481
+ *(.rodata*)
+ .rodata.HexboxAccessList
+                0x0000000008007938      0x14c .build/hexbox/mem_accesses--filename--mpu-8.o
+                0x0000000008007938                __hexbox_comp0_acl
+                0x000000000800794c                __hexbox_comp7_acl
+                0x0000000008007968                __hexbox_comp12_acl
+                0x0000000008007974                __hexbox_comp10_acl
+                0x0000000008007988                __hexbox_comp2_acl
+                0x000000000800799c                __hexbox_comp19_acl
+                0x00000000080079e0                __hexbox_comp11_acl
+                0x0000000008007a1c                __hexbox_comp5_acl
+                0x0000000008007a28                __hexbox_acl_lut
+ .rodata.str1.1
+                0x0000000008007a84      0x3ff bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                        0x400 (size before relaxing)
+ *fill*         0x0000000008007e83        0x1 
+ .rodata._svfprintf_r.str1.4
+                0x0000000008007e84       0x42 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+ *fill*         0x0000000008007ec6        0x2 
+ .rodata.blanks.7228
+                0x0000000008007ec8       0x10 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+ .rodata.zeroes.7229
+                0x0000000008007ed8       0x10 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+ .rodata._dtoa_r.str1.4
+                0x0000000008007ee8       0x10 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+                                         0x12 (size before relaxing)
+ .rodata.__mprec_bigtens
+                0x0000000008007ef8       0x28 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x0000000008007ef8                __mprec_bigtens
+ .rodata.__mprec_tens
+                0x0000000008007f20       0xc8 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+                0x0000000008007f20                __mprec_tens
+ .rodata.p05.6060
+                0x0000000008007fe8        0xc /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .rodata._setlocale_r.str1.4
+                0x0000000008007ff4        0xa /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+                                          0xd (size before relaxing)
+ *fill*         0x0000000008007ffe        0x2 
+ .rodata.str1.4
+                0x0000000008008000        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+                                          0x2 (size before relaxing)
+ .rodata._ctype_
+                0x0000000008008004      0x101 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-ctype_.o)
+                0x0000000008008004                _ctype_
+                0x0000000008008108                . = ALIGN (0x8)
+ *fill*         0x0000000008008105        0x3 
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x0000000008008108        0x8
+                0x0000000008008108                __exidx_start = .
+ *(.ARM.exidx*)
+ .ARM.exidx.CODE_REGION_6_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x20 (size before relaxing)
+ .ARM.exidx.CODE_REGION_19_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                        0x1e8 (size before relaxing)
+ .ARM.exidx.CODE_REGION_16_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                        0x218 (size before relaxing)
+ .ARM.exidx.CODE_REGION_17_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x38 (size before relaxing)
+ .ARM.exidx.CODE_REGION_21_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0xc0 (size before relaxing)
+ .ARM.exidx.CODE_REGION_12_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                          0x8 (size before relaxing)
+ .ARM.exidx.CODE_REGION_11_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                          0x8 (size before relaxing)
+ .ARM.exidx.CODE_REGION_7_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                          0x8 (size before relaxing)
+ .ARM.exidx.CODE_REGION_1_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x30 (size before relaxing)
+ .ARM.exidx.CODE_REGION_8_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x38 (size before relaxing)
+ .ARM.exidx.CODE_REGION_3_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x18 (size before relaxing)
+ .ARM.exidx.CODE_REGION_10_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x50 (size before relaxing)
+ .ARM.exidx.CODE_REGION_15_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x88 (size before relaxing)
+ .ARM.exidx.CODE_REGION_0_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x30 (size before relaxing)
+ .ARM.exidx.CODE_REGION_20_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x50 (size before relaxing)
+ .ARM.exidx.CODE_REGION_14_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                          0x8 (size before relaxing)
+ .ARM.exidx.CODE_REGION_13_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x78 (size before relaxing)
+ .ARM.exidx.CODE_REGION_2_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x10 (size before relaxing)
+ .ARM.exidx.CODE_REGION_4_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x18 (size before relaxing)
+ .ARM.exidx.CODE_REGION_18_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x38 (size before relaxing)
+ .ARM.exidx.CODE_REGION_5_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                          0x8 (size before relaxing)
+ .ARM.exidx.IRQ_CODE_REGION
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x48 (size before relaxing)
+ .ARM.exidx.CODE_REGION_9_
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                          0x8 (size before relaxing)
+ .ARM.exidx     0x0000000008008108        0x8 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x68 (size before relaxing)
+ .ARM.exidx.hexbox_rt_code
+                0x0000000008008110        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                         0x88 (size before relaxing)
+ .ARM.exidx     0x0000000008008110        0x0 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_udivmoddi4.o)
+                                          0x8 (size before relaxing)
+                0x0000000008008110                __exidx_end = .
+
+.preinit_array  0x0000000008008110        0x0
+                0x0000000008008110                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x0000000008008110                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000008008110        0x0
+                0x0000000008008110                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+                0x0000000008008110                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000008008110        0x0
+                [!provide]                        PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end, .)
+                0x0000000008009188                _sidata = LOADADDR (.data)
+
+.hexbox_rt_code
+                0x0000000008008110     0x1078
+                [!provide]                        PROVIDE (hexbox_rt_code__start, .)
+ *(.hexbox_rt_code)
+ .hexbox_rt_code
+                0x0000000008008110     0x1078 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                0x0000000008008110                __hexbox_apply_policy
+                0x00000000080081a2                __hexbox_apply_stack_mask
+                0x0000000008008202                __hexbox_get_policy
+                0x000000000800825c                __hexbox_stack_pop_and_apply
+                0x000000000800836e                __hexbox_stack_push_and_apply
+ *(.hexbox_rt_code*)
+                [!provide]                        PROVIDE (hexbox_rt_code__end, .)
+
+.CODE_REGION_16_
+                0x00000000080f8000     0x5620
+                0x00000000080f8000                _.CODE_REGION_16__start = .
+ *(.CODE_REGION_16_)
+ .CODE_REGION_16_
+                0x00000000080f8000     0x5620 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_16_*)
+                0x00000000080fd620                _.CODE_REGION_16__end = .
+
+.CODE_REGION_21_
+                0x00000000080f4000     0x28e4
+                0x00000000080f4000                _.CODE_REGION_21__start = .
+ *(.CODE_REGION_21_)
+ .CODE_REGION_21_
+                0x00000000080f4000     0x28e4 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_21_*)
+                0x00000000080f68e4                _.CODE_REGION_21__end = .
+
+.CODE_REGION_19_
+                0x00000000080f0000     0x36e4
+                0x00000000080f0000                _.CODE_REGION_19__start = .
+ *(.CODE_REGION_19_)
+ .CODE_REGION_19_
+                0x00000000080f0000     0x36e4 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                0x00000000080f0000                __original_main
+ *(.CODE_REGION_19_*)
+                0x00000000080f36e4                _.CODE_REGION_19__end = .
+
+.CODE_REGION_20_
+                0x00000000080ee000     0x10dc
+                0x00000000080ee000                _.CODE_REGION_20__start = .
+ *(.CODE_REGION_20_)
+ .CODE_REGION_20_
+                0x00000000080ee000     0x10dc bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_20_*)
+                0x00000000080ef0dc                _.CODE_REGION_20__end = .
+
+.CODE_REGION_17_
+                0x00000000080ec000     0x1502
+                0x00000000080ec000                _.CODE_REGION_17__start = .
+ *(.CODE_REGION_17_)
+ .CODE_REGION_17_
+                0x00000000080ec000     0x1502 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_17_*)
+                0x00000000080ed502                _.CODE_REGION_17__end = .
+
+.CODE_REGION_10_
+                0x00000000080eb000      0xd5a
+                0x00000000080eb000                _.CODE_REGION_10__start = .
+ *(.CODE_REGION_10_)
+ .CODE_REGION_10_
+                0x00000000080eb000      0xd5a bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_10_*)
+                0x00000000080ebd5a                _.CODE_REGION_10__end = .
+
+.CODE_REGION_18_
+                0x00000000080ea000      0xa0a
+                0x00000000080ea000                _.CODE_REGION_18__start = .
+ *(.CODE_REGION_18_)
+ .CODE_REGION_18_
+                0x00000000080ea000      0xa0a bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_18_*)
+                0x00000000080eaa0a                _.CODE_REGION_18__end = .
+
+.CODE_REGION_15_
+                0x00000000080e9800      0x696
+                0x00000000080e9800                _.CODE_REGION_15__start = .
+ *(.CODE_REGION_15_)
+ .CODE_REGION_15_
+                0x00000000080e9800      0x696 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_15_*)
+                0x00000000080e9e96                _.CODE_REGION_15__end = .
+
+.CODE_REGION_13_
+                0x00000000080e9000      0x626
+                0x00000000080e9000                _.CODE_REGION_13__start = .
+ *(.CODE_REGION_13_)
+ .CODE_REGION_13_
+                0x00000000080e9000      0x626 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_13_*)
+                0x00000000080e9626                _.CODE_REGION_13__end = .
+
+.CODE_REGION_1_
+                0x00000000080e8800      0x46c
+                0x00000000080e8800                _.CODE_REGION_1__start = .
+ *(.CODE_REGION_1_)
+ .CODE_REGION_1_
+                0x00000000080e8800      0x46c bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_1_*)
+                0x00000000080e8c6c                _.CODE_REGION_1__end = .
+
+.CODE_REGION_8_
+                0x00000000080e8400      0x2a2
+                0x00000000080e8400                _.CODE_REGION_8__start = .
+ *(.CODE_REGION_8_)
+ .CODE_REGION_8_
+                0x00000000080e8400      0x2a2 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_8_*)
+                0x00000000080e86a2                _.CODE_REGION_8__end = .
+
+.CODE_REGION_0_
+                0x00000000080e8000      0x21e
+                0x00000000080e8000                _.CODE_REGION_0__start = .
+ *(.CODE_REGION_0_)
+ .CODE_REGION_0_
+                0x00000000080e8000      0x21e bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_0_*)
+                0x00000000080e821e                _.CODE_REGION_0__end = .
+
+.CODE_REGION_11_
+                0x00000000080e7c00      0x294
+                0x00000000080e7c00                _.CODE_REGION_11__start = .
+ *(.CODE_REGION_11_)
+ .CODE_REGION_11_
+                0x00000000080e7c00      0x294 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_11_*)
+                0x00000000080e7e94                _.CODE_REGION_11__end = .
+
+.CODE_REGION_2_
+                0x00000000080e7a00      0x1a8
+                0x00000000080e7a00                _.CODE_REGION_2__start = .
+ *(.CODE_REGION_2_)
+ .CODE_REGION_2_
+                0x00000000080e7a00      0x1a8 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_2_*)
+                0x00000000080e7ba8                _.CODE_REGION_2__end = .
+
+.CODE_REGION_4_
+                0x00000000080e7800      0x170
+                0x00000000080e7800                _.CODE_REGION_4__start = .
+ *(.CODE_REGION_4_)
+ .CODE_REGION_4_
+                0x00000000080e7800      0x170 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_4_*)
+                0x00000000080e7970                _.CODE_REGION_4__end = .
+
+.CODE_REGION_7_
+                0x00000000080e7600      0x18c
+                0x00000000080e7600                _.CODE_REGION_7__start = .
+ *(.CODE_REGION_7_)
+ .CODE_REGION_7_
+                0x00000000080e7600      0x18c bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_7_*)
+                0x00000000080e778c                _.CODE_REGION_7__end = .
+
+.CODE_REGION_3_
+                0x00000000080e7400      0x16e
+                0x00000000080e7400                _.CODE_REGION_3__start = .
+ *(.CODE_REGION_3_)
+ .CODE_REGION_3_
+                0x00000000080e7400      0x16e bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_3_*)
+                0x00000000080e756e                _.CODE_REGION_3__end = .
+
+.CODE_REGION_12_
+                0x00000000080e7380       0x50
+                0x00000000080e7380                _.CODE_REGION_12__start = .
+ *(.CODE_REGION_12_)
+ .CODE_REGION_12_
+                0x00000000080e7380       0x50 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_12_*)
+                0x00000000080e73d0                _.CODE_REGION_12__end = .
+
+.CODE_REGION_14_
+                0x00000000080e7300       0x4c
+                0x00000000080e7300                _.CODE_REGION_14__start = .
+ *(.CODE_REGION_14_)
+ .CODE_REGION_14_
+                0x00000000080e7300       0x4c bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_14_*)
+                0x00000000080e734c                _.CODE_REGION_14__end = .
+
+.CODE_REGION_9_
+                0x00000000080e7280       0x5e
+                0x00000000080e7280                _.CODE_REGION_9__start = .
+ *(.CODE_REGION_9_)
+ .CODE_REGION_9_
+                0x00000000080e7280       0x5e bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                0x00000000080e7280                SystemInit
+ *(.CODE_REGION_9_*)
+                0x00000000080e72de                _.CODE_REGION_9__end = .
+
+.CODE_REGION_5_
+                0x00000000080e7200       0x62
+                0x00000000080e7200                _.CODE_REGION_5__start = .
+ *(.CODE_REGION_5_)
+ .CODE_REGION_5_
+                0x00000000080e7200       0x62 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.CODE_REGION_5_*)
+                0x00000000080e7262                _.CODE_REGION_5__end = .
+
+.IRQ_CODE_REGION
+                0x00000000080e7180       0x64
+                0x00000000080e7180                _.IRQ_CODE_REGION_start = .
+ *(.IRQ_CODE_REGION)
+ .IRQ_CODE_REGION
+                0x00000000080e7180       0x64 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                0x00000000080e7180                NMI_Handler
+                0x00000000080e7182                HardFault_Handler
+                0x00000000080e7186                BusFault_Handler
+                0x00000000080e718a                UsageFault_Handler
+                0x00000000080e718e                PendSV_Handler
+                0x00000000080e7190                SysTick_Handler
+                0x00000000080e71a4                SDIO_IRQHandler
+                0x00000000080e71b8                DMA2_Stream3_IRQHandler
+                0x00000000080e71cc                SVC_Handler
+ *(.IRQ_CODE_REGION*)
+                0x00000000080e71e4                _.IRQ_CODE_REGION_end = .
+
+.CODE_REGION_6_
+                0x00000000080e7140       0x26
+                0x00000000080e7140                _.CODE_REGION_6__start = .
+ *(.CODE_REGION_6_)
+ .CODE_REGION_6_
+                0x00000000080e7140       0x26 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                0x00000000080e7140                _exit
+                0x00000000080e715a                _getpid
+                0x00000000080e715e                _kill
+                0x00000000080e7164                _init
+ *(.CODE_REGION_6_*)
+                0x00000000080e7166                _.CODE_REGION_6__end = .
+
+.stack          0x0000000020000000     0x1000
+                0x0000000020000ffc                . = ((. + _Min_Stack_Size) - 0x4)
+ *fill*         0x0000000020000000      0xffc 
+                0x0000000020000ffc                _estack = .
+                0x0000000020001000                . = (. + 0x4)
+ *fill*         0x0000000020000ffc        0x4 
+
+.data           0x0000000020001000      0x9b0 load address 0x0000000008009188
+                0x0000000020001000                . = ALIGN (0x8)
+                0x0000000020001000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.__malloc_av_
+                0x0000000020001000      0x408 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                0x0000000020001000                __malloc_av_
+ .data.__malloc_sbrk_base
+                0x0000000020001408        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                0x0000000020001408                __malloc_sbrk_base
+ .data.__malloc_trim_threshold
+                0x000000002000140c        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                0x000000002000140c                __malloc_trim_threshold
+ .data._impure_ptr
+                0x0000000020001410        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-impure.o)
+                0x0000000020001410                _impure_ptr
+ *fill*         0x0000000020001414        0x4 
+ .data.impure_data
+                0x0000000020001418      0x428 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-impure.o)
+ .data.__global_locale
+                0x0000000020001840      0x16c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+                0x0000000020001840                __global_locale
+                0x00000000200019b0                . = ALIGN (0x8)
+ *fill*         0x00000000200019ac        0x4 
+                0x00000000200019b0                _edata = .
+                0x0000000008009b38                _siccmram = LOADADDR (.ccmram)
+
+.igot.plt       0x00000000200019b0        0x0 load address 0x0000000008009b38
+ .igot.plt      0x00000000200019b0        0x0 .build/startup_stm32f469xx.o
+
+.ccmram         0x0000000010000000        0x0 load address 0x0000000008009b38
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _sccmram = .
+ *(.ccmram)
+ *(.ccmram*)
+                0x0000000010000000                . = ALIGN (0x4)
+                0x0000000010000000                _eccmram = .
+                0x0000000010000000                . = ALIGN (0x4)
+
+.bss            0x00000000200019b0       0x60
+                0x00000000200019b0                _sbss = .
+                0x00000000200019b0                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x00000000200019b0        0x4 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.bss*)
+ .bss.__malloc_current_mallinfo
+                0x00000000200019b4       0x28 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                0x00000000200019b4                __malloc_current_mallinfo
+ .bss.__malloc_max_sbrked_mem
+                0x00000000200019dc        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                0x00000000200019dc                __malloc_max_sbrked_mem
+ .bss.__malloc_max_total_mem
+                0x00000000200019e0        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                0x00000000200019e0                __malloc_max_total_mem
+ .bss.__malloc_top_pad
+                0x00000000200019e4        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+                0x00000000200019e4                __malloc_top_pad
+ *(COMMON)
+ COMMON         0x00000000200019e8       0x21 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+                0x00000000200019e8                __lock___atexit_recursive_mutex
+                0x00000000200019ec                __lock___arc4random_mutex
+                0x00000000200019f0                __lock___env_recursive_mutex
+                0x00000000200019f4                __lock___sinit_recursive_mutex
+                0x00000000200019f8                __lock___malloc_recursive_mutex
+                0x00000000200019fc                __lock___at_quick_exit_mutex
+                0x0000000020001a00                __lock___dd_hash_mutex
+                0x0000000020001a04                __lock___tz_mutex
+                0x0000000020001a08                __lock___sfp_recursive_mutex
+ *fill*         0x0000000020001a09        0x3 
+ COMMON         0x0000000020001a0c        0x4 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+                0x0000000020001a0c                errno
+                0x0000000020001a10                . = ALIGN (0x4)
+                0x0000000020001a10                _ebss = .
+                0x0000000020001a10                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x0000000020001a10      0x200
+                0x0000000020001a10                . = ALIGN (0x4)
+                0x0000000020001a10                PROVIDE (end, .)
+                [!provide]                        PROVIDE (_end, .)
+                0x0000000020001c10                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020001a10      0x200 
+                0x0000000020001c10                . = ALIGN (0x4)
+                0x0000000008009b38                .hexbox_rt_ram__vma_start = LOADADDR (.hexbox_rt_ram)
+
+.hexbox_rt_ram  0x0000000020001c10      0x86c load address 0x0000000008009b38
+                0x0000000020001c10                . = ALIGN (0x4)
+                0x0000000020001c10                .hexbox_rt_ram__start = .
+ *(.hexbox_rt_ram)
+ .hexbox_rt_ram
+                0x0000000020001c10      0x86c bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.hexbox_rt_ram*)
+                0x000000002000247c                . = ALIGN (0x4)
+                0x000000002000247c                .hexbox_rt_ram__end = .
+                0x000000000800a3a4                .DATA_REGION_3__vma_start = LOADADDR (.DATA_REGION_3__data)
+
+.DATA_REGION_3__data
+                0x000000002001c000     0x1d4c load address 0x000000000800a3a4
+                0x000000002001c000                .DATA_REGION_3__data_start = .
+                0x000000002001c000                .DATA_REGION_3__mpu_start = .
+ *(.DATA_REGION_3__data)
+ .DATA_REGION_3__data
+                0x000000002001c000     0x1d4c bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.DATA_REGION_3__data*)
+                0x000000002001dd4c                . = ALIGN (0x4)
+                0x000000002001dd4c                .DATA_REGION_3__data_end = .
+
+.rel.dyn        0x000000000800c0f0        0x0
+ .rel.iplt      0x000000000800c0f0        0x0 .build/startup_stm32f469xx.o
+
+.DATA_REGION_3__bss
+                0x000000002001dd4c     0x1028
+                0x000000002001dd4c                .DATA_REGION_3__bss_start = .
+                0x000000002001dd4c                . = ALIGN (0x4)
+ *(.DATA_REGION_3__bss)
+ *fill*         0x000000002001dd4c        0x4 
+ .DATA_REGION_3__bss
+                0x000000002001dd50     0x1024 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.DATA_REGION_3__bss*)
+                0x000000002001ed74                . = ALIGN (0x4)
+                0x000000002001ed74                .DATA_REGION_3__bss_end = .
+                0x000000000800c0f0                .DATA_REGION_13__vma_start = LOADADDR (.DATA_REGION_13__data)
+
+.DATA_REGION_13__data
+                0x000000002001bfe0        0x0 load address 0x000000000800c0f0
+                0x000000002001bfe0                .DATA_REGION_13__data_start = .
+                0x000000002001bfe0                .DATA_REGION_13__mpu_start = .
+ *(.DATA_REGION_13__data)
+ *(.DATA_REGION_13__data*)
+                0x000000002001bfe0                . = ALIGN (0x4)
+                0x000000002001bfe0                .DATA_REGION_13__data_end = .
+
+.DATA_REGION_13__bss
+                0x000000002001bfe0        0x4
+                0x000000002001bfe0                .DATA_REGION_13__bss_start = .
+                0x000000002001bfe0                . = ALIGN (0x4)
+ *(.DATA_REGION_13__bss)
+ .DATA_REGION_13__bss
+                0x000000002001bfe0        0x4 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ *(.DATA_REGION_13__bss*)
+                0x000000002001bfe4                . = ALIGN (0x4)
+                0x000000002001bfe4                .DATA_REGION_13__bss_end = .
+                0x000000000800c0f0                .DATA_REGION_8__vma_start = LOADADDR (.DATA_REGION_8__data)
+
+.DATA_REGION_8__data
+                0x000000002001bfe0        0x0 load address 0x000000000800c0f0
+                0x000000002001bfe0                .DATA_REGION_8__data_start = .
+                0x000000002001bfe0                .DATA_REGION_8__mpu_start = .
+ *(.DATA_REGION_8__data)
+ *(.DATA_REGION_8__data*)
+                0x000000002001bfe0                . = ALIGN (0x4)
+                0x000000002001bfe0                .DATA_REGION_8__data_end = .
+
+.DATA_REGION_8__bss
+                0x000000002001bfe0        0x0
+                0x000000002001bfe0                .DATA_REGION_8__bss_start = .
+                0x000000002001bfe0                . = ALIGN (0x4)
+ *(.DATA_REGION_8__bss)
+ *(.DATA_REGION_8__bss*)
+                0x000000002001bfe0                . = ALIGN (0x4)
+                0x000000002001bfe0                .DATA_REGION_8__bss_end = .
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x0000000000000000       0x32
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x36 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ .ARM.attributes
+                0x0000000000000036       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000064       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x0000000000000092       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+ .ARM.attributes
+                0x00000000000000c0       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x00000000000000ee       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x000000000000011c       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o)
+ .ARM.attributes
+                0x000000000000014a       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+ .ARM.attributes
+                0x0000000000000178       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+ .ARM.attributes
+                0x00000000000001a6       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-freer.o)
+ .ARM.attributes
+                0x00000000000001d4       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000202       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+ .ARM.attributes
+                0x0000000000000230       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .ARM.attributes
+                0x000000000000025e       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memchr.o)
+ .ARM.attributes
+                0x000000000000027a       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x0000000000000296       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .ARM.attributes
+                0x00000000000002c4       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+ .ARM.attributes
+                0x00000000000002f2       0x1c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x000000000000030e       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .ARM.attributes
+                0x000000000000033c       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-callocr.o)
+ .ARM.attributes
+                0x000000000000036a       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .ARM.attributes
+                0x0000000000000398       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mbtowc_r.o)
+ .ARM.attributes
+                0x00000000000003c6       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x00000000000003f4       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000000000000422       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reallocr.o)
+ .ARM.attributes
+                0x0000000000000450       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-wctomb_r.o)
+ .ARM.attributes
+                0x000000000000047e       0x2e /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-ctype_.o)
+ .ARM.attributes
+                0x00000000000004ac       0x1e /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000000000004ca       0x1e /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000000000004e8       0x1e /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x0000000000000506       0x1e /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_unorddf2.o)
+ .ARM.attributes
+                0x0000000000000524       0x1e /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x0000000000000542       0x1e /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000560       0x2e /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x000000000000058e       0x1e /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_dvmd_tls.o)
+OUTPUT(bin/Animation--filename--mpu-8--hexbox--final.elf elf32-littlearm)
+
+.debug_info     0x0000000000000000    0x11ebc
+ .debug_info    0x0000000000000000      0x1dc .build/startup_stm32f469xx.o
+ .debug_info    0x00000000000001dc    0x11ce0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.debug_abbrev   0x0000000000000000      0x6fb
+ .debug_abbrev  0x0000000000000000       0x28 .build/startup_stm32f469xx.o
+ .debug_abbrev  0x0000000000000028      0x6d3 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.debug_aranges  0x0000000000000000       0x28
+ .debug_aranges
+                0x0000000000000000       0x28 .build/startup_stm32f469xx.o
+
+.debug_line     0x0000000000000000     0xd1da
+ .debug_line    0x0000000000000000       0x6e .build/startup_stm32f469xx.o
+ .debug_line    0x000000000000006e       0x40 .build/hexbox/mem_accesses--filename--mpu-8.o
+ .debug_line    0x00000000000000ae     0xd12c bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.debug_str      0x0000000000000000     0x6146
+ .debug_str     0x0000000000000000     0x6146 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                       0x65bb (size before relaxing)
+
+.debug_loc      0x0000000000000000      0xbe8
+ .debug_loc     0x0000000000000000      0xbe8 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.debug_ranges   0x0000000000000000      0x6d8
+ .debug_ranges  0x0000000000000000      0x6d8 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.debug_macinfo  0x0000000000000000        0x1
+ .debug_macinfo
+                0x0000000000000000        0x1 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.debug_pubnames
+                0x0000000000000000     0x277f
+ .debug_pubnames
+                0x0000000000000000     0x277f bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.debug_pubtypes
+                0x0000000000000000     0x1809
+ .debug_pubtypes
+                0x0000000000000000     0x1809 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.comment        0x0000000000000000       0x15
+ .comment       0x0000000000000000       0x15 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+                                        0x349 (size before relaxing)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+
+.debug_frame    0x0000000000000000     0x29b0
+ .debug_frame   0x0000000000000000     0x1e78 bin/Animation--filename--mpu-8--hexbox--final.elf.o
+ .debug_frame   0x0000000000001e78       0x2c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-init.o)
+ .debug_frame   0x0000000000001ea4       0x30 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-malloc.o)
+ .debug_frame   0x0000000000001ed4       0x58 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mallocr.o)
+ .debug_frame   0x0000000000001f2c       0x30 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mlock.o)
+ .debug_frame   0x0000000000001f5c       0x2c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sbrkr.o)
+ .debug_frame   0x0000000000001f88       0x84 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-sprintf.o)
+ .debug_frame   0x000000000000200c       0x40 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfprintf.o)
+ .debug_frame   0x000000000000204c       0x88 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-dtoa.o)
+ .debug_frame   0x00000000000020d4       0x74 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-freer.o)
+ .debug_frame   0x0000000000002148       0x40 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-localeconv.o)
+ .debug_frame   0x0000000000002188       0xb0 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-lock.o)
+ .debug_frame   0x0000000000002238      0x25c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mprec.o)
+ .debug_frame   0x0000000000002494       0x58 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reent.o)
+ .debug_frame   0x00000000000024ec       0x78 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-svfiprintf.o)
+ .debug_frame   0x0000000000002564       0x28 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-callocr.o)
+ .debug_frame   0x000000000000258c       0x6c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-locale.o)
+ .debug_frame   0x00000000000025f8       0x4c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-mbtowc_r.o)
+ .debug_frame   0x0000000000002644       0x30 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memmove.o)
+ .debug_frame   0x0000000000002674       0x34 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-memset.o)
+ .debug_frame   0x00000000000026a8       0x68 /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-reallocr.o)
+ .debug_frame   0x0000000000002710       0x3c /home/t/Downloads/ACES-master/gcc/bins//arm-none-eabi/lib/thumb/v7e-m/libc.a(lib_a-wctomb_r.o)
+ .debug_frame   0x000000000000274c       0xac /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00000000000027f8       0x50 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x0000000000002848       0xc4 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_cmpdf2.o)
+ .debug_frame   0x000000000000290c       0x20 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_unorddf2.o)
+ .debug_frame   0x000000000000292c       0x24 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_arm_fixdfsi.o)
+ .debug_frame   0x0000000000002950       0x2c /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x000000000000297c       0x34 /home/t/Downloads/ACES-master/gcc/bins//lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/libgcc.a(_udivmoddi4.o)

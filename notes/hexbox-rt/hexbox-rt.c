@@ -21,19 +21,31 @@
 
 //TODO: CLEAN up old definitions, start with __hexbox...
 
-
+/* MPU control register: MPU_CTRL*/
 #define MPU_CONFIG_REG     *((volatile uint32_t *) 0xE000ED94)
-/* 0xE000ED98, MPU region number register */
+/* 0xE000ED98, MPU region number register: MPU_RNR */
 #define MPU_REGION_NUM_REG *((volatile uint32_t *) 0xE000ED98)
+/* MPU region base address register: MPU_RBAR */
 #define MPU_REGION_ADDR_REG *((volatile uint32_t *) 0xE000ED9C)
+/* MPU region attribute and size register: MPU_RASR */
 #define MPU_REGION_ATTR_REG *((volatile uint32_t *) 0xE000EDA0)
 
+
+// https://interrupt.memfault.com/blog/cortex-m-fault-debug
+/* memory manage address register */
 #define MMAR *((volatile uint32_t *) 0xE000ED34)
+/* memory management fault status register */
 #define CFSR *((volatile uint32_t *) 0xE000ED28)
+/* debug exception and monitor control register */
 #define DEMCR *((volatile uint32_t *) 0xE000EDFC)
+
+// http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0552a/CIHFDJCA.html
+/* system control block */
 #define SCB_SHCSR_MEMFAULTENA_Pos          16U
 #define SCB_SHCSR_MEMFAULTENA_Msk          (1UL << SCB_SHCSR_MEMFAULTENA_Pos)
+/* system handler control and state register: SHCRS */
 #define SHCSR *((volatile uint32_t *)0xE000ED24)
+/* system handler priority register 2 */
 #define SHPR2 *((volatile uint32_t *)0xE000ED1C)
 
 #define EXCEPTION_STACK_NUM_WORDS 8
@@ -43,6 +55,7 @@
 #define STACK_FULL 21
 #define INVALID_RETURN 22
 
+/* Disable = 0 */
 #define MPU_DISABLE_CONSTANT 0
 #define MPU_STACK_REGION_NUM 2
 
@@ -57,13 +70,15 @@
   #define SET_PRIVILEGES
 #endif
 
-
+/* put the compartment stack and its pointer to RAM */
+/* compartment entry has the return pointer, policy, atack address, and stack attributes */
 struct comp_stack_entry hexbox_comp_stack[COMP_STACK_SIZE] AT_HEXBOX_DATA;
+/* the pointer points to the stack of this compartment*/
 struct comp_stack_entry * hexbox_comp_stack_ptr AT_HEXBOX_DATA;
 
 //struct comp_stack_entry * hexbox_current_comp;
 
-
+/* the policy contains the id of the compartment and MPU region of it  */
 struct hexbox_policy* AT_HEXBOX_CODE __hexbox_get_policy(struct hexbox_metadata * md, uint32_t dest) ;
 void AT_HEXBOX_CODE __hexbox_apply_policy(struct hexbox_policy * policy);
 void AT_HEXBOX_CODE __hexbox_stack_push_and_apply(uint32_t * ret_ptr,struct hexbox_policy * p,uint32_t sp);
@@ -94,6 +109,7 @@ uint32_t AT_HEXBOX_DATA __hexbox_total_exe_time;
 uint32_t AT_HEXBOX_DATA __hexbox_init_exe_time;
 uint32_t AT_HEXBOX_DATA __hexbox_unknown_comp_exe_time;
 
+/* the number of compartments */
 #define MAX_COMPS 50
 uint32_t AT_HEXBOX_DATA __hexbox_comp_entries[MAX_COMPS];
 uint32_t AT_HEXBOX_DATA __hexbox_comp_exits[MAX_COMPS];
@@ -120,8 +136,9 @@ This determine how many sub regions should be disabled
 IE if region is 2**N bits size, then look at bits N-1:N-3, this is the
 number of subregions that can be disabled (D). Bits calculated by 2**D-1
 */
-void __attribute__((used)) __hexbox_apply_stack_mask(struct hexbox_MPU_region* region,uint32_t sp){
 
+/* used is targged in the object file to avoid removal by linker unused section removal */
+void __attribute__((used)) __hexbox_apply_stack_mask(struct hexbox_MPU_region* region,uint32_t sp){
 
   uint32_t subregions;
   uint32_t num_used;
@@ -137,6 +154,7 @@ void __attribute__((used)) __hexbox_apply_stack_mask(struct hexbox_MPU_region* r
 
 }
 
+/* this function will set the information of MPU: region number, address, attributes */
 void __hexbox_mpu_set_stack(uint32_t addr,uint32_t attrs){
   MPU_REGION_NUM_REG = MPU_STACK_REGION_NUM;
   MPU_REGION_ADDR_REG = addr; //sets region to write to
@@ -144,6 +162,7 @@ void __hexbox_mpu_set_stack(uint32_t addr,uint32_t attrs){
 
 }
 
+/* data section */
 void __attribute__((used)) __hexbox_init_data_section(uint32_t * vma_start,\
      uint32_t* ram_start,uint32_t *ram_end )
 {
@@ -158,7 +177,7 @@ void __attribute__((used)) __hexbox_init_data_section(uint32_t * vma_start,\
   }
 }
 
-
+/* bss section */
 void __attribute__((used)) __hexbox_init_bss_section(uint32_t* ram_start,\
      uint32_t *ram_end )
 {
@@ -171,31 +190,35 @@ void __attribute__((used)) __hexbox_init_bss_section(uint32_t* ram_start,\
 }
 
 
-
+/* privilege mode switches */
 #define SVC100 0xDF64
 #define SVC101 0xDF65
 #define SVC102 0xDF66
 #define SVC0 0xDF00
 #define SVCFF 0xDFFF
 /* HEXBOX Runtime  ************************************************************/
+/* exception_frame stores all registers to store the environment */
 enum hexbox_switch_type __attribute__((used))handle_svc(struct exception_frame *stack){ 
 
     enum hexbox_switch_type switch_type = ERROR;
-    __asm volatile ("cpsid i" : : : "memory");
-    __asm volatile ("cpsid f" : : : "memory");
 
-    uint32_t pre_exception_sp = ((uint32_t)stack+EXCEPTION_STACK_NUM_WORDS);
-    uint16_t instr = (uint16_t)(*((stack->pc)-1)>>16);
+    //http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0552a/BABHBAAB.html
+    __asm volatile ("cpsid i" : : : "memory"); /* Disable interrupts and configurable fault handlers (set PRIMASK) */
+    __asm volatile ("cpsid f" : : : "memory"); /* Disable interrupts and all fault handlers (set FAULTMASK) */
+
+    uint32_t pre_exception_sp = ((uint32_t)stack+EXCEPTION_STACK_NUM_WORDS); /* get previous stack pointer */
+    uint16_t instr = (uint16_t)(*((stack->pc)-1)>>16);  /* get the instruction */
 
     uint32_t id;
 
     struct hexbox_metadata *md;
     struct hexbox_policy *p;
     // ------------------------Compartment Entry ----------------------------
-    if( instr == SVC100){ //Compartment Entry
+    if( instr == SVC100){ //Compartment Entry, initialize the stack
       switch_type = ENTRY;
       uint32_t *dest_addr = stack->lr;
       md = (struct hexbox_metadata *)(*stack->pc);
+      /* what is this policy?? */
       p = __hexbox_get_policy(md,(uint32_t)stack->lr);
       if (p){
           __hexbox_stack_push_and_apply(stack->pc+1,p,pre_exception_sp);
@@ -251,6 +274,10 @@ void __attribute__((used))__hexbox_stack_push_and_apply(uint32_t * ret_ptr,struc
 
     __hexbox_apply_stack_mask(&p->regions[MPU_STACK_REGION_NUM],sp);
 
+    /*  http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0489c/CIHGHHIE.html
+        dsb: Data Synchronization Barrier acts as a special kind of memory barrier.
+        isb: Instruction Synchronization Barrier flushes the pipeline in the processor,
+    */
     __asm volatile(
      "dsb \n\t"
      "isb \n\t");
