@@ -57,11 +57,13 @@
 
 /* Disable = 0 */
 #define MPU_DISABLE_CONSTANT 0
+/* we can create stack layout to match MPU regions manually */
 #define MPU_STACK_REGION_NUM 2
 
 #define HEXBOX_FAULT while(1){}
 #define MOD_PRIVILEGES
 
+/* privileges setting */
 #ifdef MOD_PRIVILEGES
   #define DROP_PRIVILEGES __asm("msr CONTROL, %[reg] " : :[reg]"r"(1):"memory")
   #define SET_PRIVILEGES __asm("msr CONTROL, %[reg] " : :[reg]"r"(0):"memory")
@@ -96,7 +98,7 @@ uint32_t AT_HEXBOX_CODE __hexbox_get_and_reset_dwt_counter(uint32_t sub_isr);
 
 extern struct hexbox_policy* _hexbox_comp___hexbox_default;
 
-
+/* Global variables */
 //Can't be placed in HEXBOX DATA as needs to be initialized before any SVC's
 //happen (ie needs to be in .bss) only used for profiling
 uint32_t stack_initialized = 0;
@@ -109,7 +111,7 @@ uint32_t AT_HEXBOX_DATA __hexbox_total_exe_time;
 uint32_t AT_HEXBOX_DATA __hexbox_init_exe_time;
 uint32_t AT_HEXBOX_DATA __hexbox_unknown_comp_exe_time;
 
-/* the number of compartments */
+/* the number of compartments, table stores each compartment */
 #define MAX_COMPS 50
 uint32_t AT_HEXBOX_DATA __hexbox_comp_entries[MAX_COMPS];
 uint32_t AT_HEXBOX_DATA __hexbox_comp_exits[MAX_COMPS];
@@ -191,7 +193,7 @@ void __attribute__((used)) __hexbox_init_bss_section(uint32_t* ram_start,\
 
 
 /* privilege mode switches */
-#define SVC100 0xDF64
+#define SVC100 0xDF64  // DF means SVC instruction, 0x64 means the service
 #define SVC101 0xDF65
 #define SVC102 0xDF66
 #define SVC0 0xDF00
@@ -317,7 +319,7 @@ struct hexbox_policy* __attribute__((used))__hexbox_get_policy(struct hexbox_met
   return NULL;
 }
 
-
+/* re-configure the MPU */
 void __attribute__((used))__hexbox_apply_policy(struct hexbox_policy * policy){
   uint8_t i;
   uint32_t base_addr;
@@ -382,7 +384,7 @@ void __hexbox_start_dwt_counter(){
 
 /**
 * __hexbox_get_and_reset_dwt_counter
-* Stops the DWT Counter, reads and clears it
+* Stops the DWT Counter (cycle counting), reads and clears it
 * This enable capturing of just executing time without counting code num_used
 * To profile the Execution
 *
@@ -471,23 +473,23 @@ __attribute__((naked))void SVC_Handler(){
   );
 }
 
-/* The exception handled for the MPU is the dedicated memory management fault exception handler */
+/* The exception handled for the MPU is the dedicated memory management fault exception handler, rewrite the memory management handler to point to the hexbox_handler */
 __attribute__((naked))void MemManage_Handler(){
   __asm(
     "push {lr}\n\t"
     "bl __hexbox_start_isr_timing\n\t"
     "pop {lr}\n\t"
     "pop {R0-R3}\n\t"
-    "ldr R12,=__hexbox_emulator_registers \n\t"
+    "ldr R12,=__hexbox_emulator_registers \n\t"   // load the re-defined registers
     "stmia R12!, {R0-R11} \n\t"
     "pop {R0,R2,R3,R4} \n\t"
     "mov R1,SP \n\t"
     "stmia R12!, {R0-R4} \n\t"
     "ldr R0,[R3] \n\t"
     "ldr R1,=__hexbox_emulator_registers \n\t"
-    "ldr SP,=__hexbox_emulator_stack+(100*4) \n\t"
+    "ldr SP,=__hexbox_emulator_stack+(100*4) \n\t"    // load the hexbox stack
     "push {lr} \n\t"
-    "bl __hexbox_MemManage_Handler \n\t"
+    "bl __hexbox_MemManage_Handler \n\t"   //call the hexbox handler
     "pop {lr} \n\t"
     "ldr r12,=__hexbox_emulator_registers+(13*4)\n\t"
     "ldmia r12,{r0-r3} \n\t"
@@ -521,7 +523,7 @@ void __hexbox_start_isr_timing(){
   }
 }
 
-/* used for evaluation: swith time */
+/* used for evaluation: switch time */
 void __hexbox_stop_switch_isr_timing(enum hexbox_switch_type type){
   uint32_t exe_time = __hexbox_get_and_reset_dwt_counter(0);
   uint32_t id;

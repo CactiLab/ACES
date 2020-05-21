@@ -40,6 +40,13 @@ This file setup the interrupt status register, is called by mem_manage_handler.
 #define t2STMIA      0xE8800000     //|11101|000|1W00| Rn |0M0| reg list      |
 #define t2STMDB      0xE9000000     //|11101|001|0W00| Rn |0M0| reg list      |
 
+/* 
+Those store instructions varials because of the variables offset: Immediate value as the offset, Register as the offset, and Scaled register as the offset. "https://azeria-labs.com/memory-instructions-load-and-store-part-4/"
+Other instructions are for multiple stores, such as stmia, stmdb. "https://azeria-labs.com/load-and-store-multiple-part-5/"
+
+https://www.csie.ntu.edu.tw/~cyy/courses/assembly/10fall/lectures/handouts/lec09_ARMisa_4up.pdf 
+
+*/
 //******************************STORE INSTRUCTIONS***************************/
 
 #define EMULATOR_FAULT while(1);
@@ -136,16 +143,15 @@ mov r12, :lower16:funct1_A\n\t"
 
 /* interrupt status register setup
 'naked' tells the compiler does not generate prologue and epilogue sequences for functions 
-
+The size of this function is 0...I didn't find where this function is used.
+*/
+void AT_HEXBOX_CODE __attribute__((naked))__hexbox_emulator_isr_setup(){
+/*
 ldr: loads a register with a value from a PC-relative memory address
   ldr{type}{cond}Rt, label (PC-relative expression)
 stmia: store multiple registers, increment after, load value from register to address
 ldmia: load multiple registers, increment after, load value from address to register
-
-The size of this function is 0...I didn't find where this function is used.
 */
-void AT_HEXBOX_CODE __attribute__((naked))__hexbox_emulator_isr_setup(){
-
   __asm(
     "pop {R0-R3}\n\t"
     "ldr R12,=__hexbox_emulator_registers \n\t"
@@ -171,9 +177,8 @@ void AT_HEXBOX_CODE __attribute__((naked))__hexbox_emulator_isr_setup(){
 /* 
 Called by hexbox-rt hexbox_memmanage_handler: Regs->pc += emulate_store(instr,(uint32_t *)Regs, id);
     Based on different store instructions to calculate the pc.
-
-It will use check_addr() function to determine whether this address is accessible or not. 
-
+It will call check_addr() function to determine whether this address is accessible or not. 
+    check_addr() function has two cases: record mode and enforce mode
 */
 uint8_t AT_HEXBOX_CODE emulate_store(uint32_t inst,uint32_t * Regs, uint32_t comp_id){
   uint16_t opcode;
@@ -191,10 +196,12 @@ uint8_t AT_HEXBOX_CODE emulate_store(uint32_t inst,uint32_t * Regs, uint32_t com
   uint32_t index;
 
   opcode = inst & 0xF800;
-  thumb_inst = inst &0xFFFF;
+  thumb_inst = inst &0xFFFF;    /*  */
+  /* Different store instructions have different calculations of the pc */
   switch (opcode){
     case 0xC000 :
       //tSTMIA       0xC000       //|1100|0 Rn|reg list |
+      //STMIA Rn reg_list         // Rn: destination, base register
       Rn = (thumb_inst >>8) & 7;
       for (reg_list = thumb_inst&0xff, i=0 ;
             reg_list;
@@ -209,6 +216,7 @@ uint8_t AT_HEXBOX_CODE emulate_store(uint32_t inst,uint32_t * Regs, uint32_t com
       break;
     case 0x9000 :
       //tSTR_im2     STR<c> <Rt>,[SP,#<imm8>]      //|1001|0Rt | imm8    |
+      //store the immediate value from SP to Rt
       Rt = (thumb_inst>>8) & 0x7;
       Rn = 13;//SP
       offset = ((thumb_inst & 0xFF)<<2);
